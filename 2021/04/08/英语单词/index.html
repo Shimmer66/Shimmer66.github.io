@@ -1,6 +1,413 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>正则表达式 - Shimmer</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Shimmer"><meta name="msapplication-TileImage" content="/img/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Shimmer"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta description="This is for notes and diary"><meta property="og:type" content="blog"><meta property="og:title" content="Shimmer"><meta property="og:url" content="https://shimmer66.github.io/"><meta property="og:site_name" content="ShimmerのBlog"><meta property="og:description" content="This is for notes and diary"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://shimmer66.github.io/img/avatar.png"><meta property="article:published_time" content="2020-10-03T08:47:48.000Z"><meta property="article:modified_time" content="2020-10-03T13:20:07.000Z"><meta property="article:author" content="Shimmer"><meta property="article:tag" content="笔记"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/avatar.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://shimmer66.github.io/hidden/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html"},"headline":"Shimmer","image":["https://shimmer66.github.io/img/avatar.png"],"datePublished":"2020-10-03T08:47:48.000Z","dateModified":"2020-10-03T13:20:07.000Z","author":{"@type":"Person","name":"shimmer"},"description":"This is for notes and diary"}</script><link rel="icon" href="/img/favicon.png"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><script async="" referrerpolicy="no-referrer" src="//cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script src="/js/md5.min.js"></script><meta name="generator" content="Hexo 5.3.0"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/favicon.png" alt="Shimmer" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/about">留言&amp;关于</a><a class="navbar-item" href="/self-talking">碎碎念</a><a class="navbar-item" href="/plan">计划</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main"><!--!--><div class="card"><article class="card-content article" role="article"><h1 class="title is-3 is-size-4-mobile">正则表达式</h1><div class="content"><p>正则表达式,又称规则表达式(<code> Regular Expression</code>,代码中简写为RE,regex,regexp),是对字符串操作的一种逻辑公式,即用事先定义好的一些特定字符,组成一个”规则字符串”,通常用来被检索替换那些符合某个模式的文本.</p>
-</div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/css/share.min.css"><div class="social-share"></div><script src="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script></article></div><!--!--><!--!--><div class="card"><div class="card-content"><div class="title is-5">评论</div><div class="content" id="comment-container"></div><script>var valine = new Valine({
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>English words - Shimmer</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Shimmer"><meta name="msapplication-TileImage" content="/img/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Shimmer"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta description="This is for notes and diary"><meta property="og:type" content="blog"><meta property="og:title" content="Shimmer"><meta property="og:url" content="https://shimmer66.github.io/"><meta property="og:site_name" content="ShimmerのBlog"><meta property="og:description" content="This is for notes and diary"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://shimmer66.github.io/img/avatar.png"><meta property="article:published_time" content="2021-04-08T11:35:38.000Z"><meta property="article:modified_time" content="2021-05-01T11:41:10.115Z"><meta property="article:author" content="Shimmer"><meta property="article:tag" content="English"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/avatar.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://shimmer66.github.io/2021/04/08/%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D/"},"headline":"Shimmer","image":["https://shimmer66.github.io/img/avatar.png"],"datePublished":"2021-04-08T11:35:38.000Z","dateModified":"2021-05-01T11:41:10.115Z","author":{"@type":"Person","name":"shimmer"},"description":"This is for notes and diary"}</script><link rel="icon" href="/img/favicon.png"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><script async="" referrerpolicy="no-referrer" src="//cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script src="/js/md5.min.js"></script><meta name="generator" content="Hexo 5.3.0"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/favicon.png" alt="Shimmer" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/about">留言&amp;关于</a><a class="navbar-item" href="/self-talking">碎碎念</a><a class="navbar-item" href="/plan">计划</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-04-08  <a class="commentCountImg" href="/2021/04/08/%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D/#comment-container"><span class="display-none-class">/2021/04/08/英语单词/</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="ba2c88b381da60698e14fa602f4fae1f">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>5 分钟  <i class="fas fa-pencil-alt"> </i>0.8 k</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">English words</h1><div class="content"><hr>
+<p>format: 版式,格式<br>action: 动作,活动<br>interaction: 互动,交互动作<br>abstraction: 抽象<br>instance: 实例</p>
+<a id="more"></a>
+<p>interface: 界面/接口<br>dependency: 依赖<br>generalization: 泛化<br>association: 关联<br>aggregation: 聚合<br>composition: 组合<br>implementation: 实现<br>analysis: 分析<br>activity diagram: 活动图<br>attribute: 属性<br>basic flow: 基本流程<br>component diagram: 组件图</p>
+<p>plot (绘制,标出)</p>
+<p>assign(分配,指定)</p>
+<p>script(脚本,手迹)</p>
+<p>apropos(适当的,恰好的)</p>
+<p>manuals(手册)</p>
+<p>reference(参考,引文)</p>
+<p>attributes(属性)</p>
+<p>variables(变量)</p>
+<p>vector(向量)</p>
+<p>numeric(数字的)</p>
+<p>sequence(序列,顺序)</p>
+<p>generic(一般的,通用的)</p>
+<p>respective(各自的)</p>
+<p>Linear regression model (线性回归模型)</p>
+<p>dimensions(维度)</p>
+<p>components(分量)</p>
+<p>chr:数值表达式</p>
+<p>replicate: 复制 重复</p>
+<p>concatenate: 把…联系起来</p>
+<p>quantile: 分位数</p>
+<p>median: 中值 中位数</p>
+<p>sieve: 筛子 滤网 不能守密的人<code>copy:</code></p>
+<table>
+<thead>
+<tr>
+<th><strong>中文</strong></th>
+<th><strong>英文</strong></th>
+<th><strong>中文</strong></th>
+<th><strong>英文</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>抽象</td>
+<td>Abstraction</td>
+<td>实例</td>
+<td>Instance</td>
+</tr>
+<tr>
+<td>动作、活动</td>
+<td>Action</td>
+<td>互动、交互作用</td>
+<td>Interaction</td>
+</tr>
+<tr>
+<td>动作流、任务流程管理</td>
+<td>Action Flow</td>
+<td>接口</td>
+<td>Interface</td>
+</tr>
+<tr>
+<td>活跃的、主动的</td>
+<td>Active</td>
+<td>界面</td>
+<td>Interface</td>
+</tr>
+<tr>
+<td>活动</td>
+<td>Activity</td>
+<td>不变量、不变的</td>
+<td>Invariant</td>
+</tr>
+<tr>
+<td>活动图</td>
+<td>Activity Diagram</td>
+<td>生命线</td>
+<td>Lifeline</td>
+</tr>
+<tr>
+<td>行为者</td>
+<td>Actor</td>
+<td>连结</td>
+<td>Link</td>
+</tr>
+<tr>
+<td>聚合</td>
+<td>Aggregation</td>
+<td>逻辑视图</td>
+<td>Logical View</td>
+</tr>
+<tr>
+<td>其它流程</td>
+<td>Alternative Flow</td>
+<td>消息</td>
+<td>Message</td>
+</tr>
+<tr>
+<td>分析</td>
+<td>Analysis</td>
+<td>方法</td>
+<td>Method</td>
+</tr>
+<tr>
+<td>分析模式</td>
+<td>Analysis Pattern (AP)</td>
+<td>模型</td>
+<td>Model</td>
+</tr>
+<tr>
+<td>应用框架</td>
+<td>Application Framework (AF)</td>
+<td>多样性</td>
+<td>Multiplicity</td>
+</tr>
+<tr>
+<td>架构样式</td>
+<td>Architectural Pattern</td>
+<td>导航</td>
+<td>Navigation</td>
+</tr>
+<tr>
+<td>关连</td>
+<td>Association</td>
+<td>嵌套的状态</td>
+<td>Nested State</td>
+</tr>
+<tr>
+<td>属性</td>
+<td>Attribute</td>
+<td>节点</td>
+<td>Node</td>
+</tr>
+<tr>
+<td>基本流程</td>
+<td>Basic Flow</td>
+<td>注意、强调、说明</td>
+<td>Note</td>
+</tr>
+<tr>
+<td>行为</td>
+<td>Behavior</td>
+<td>对象</td>
+<td>Object</td>
+</tr>
+<tr>
+<td>边界</td>
+<td>Boundary</td>
+<td>对象约束语言</td>
+<td>Object Constraint Language</td>
+</tr>
+<tr>
+<td>呼叫、访问</td>
+<td>Call</td>
+<td>对象图</td>
+<td>Object Diagram</td>
+</tr>
+<tr>
+<td>类</td>
+<td>Class</td>
+<td>面向对象</td>
+<td>Object Oriented</td>
+</tr>
+<tr>
+<td>类别图</td>
+<td>Class Diagram</td>
+<td>操作</td>
+<td>Operation</td>
+</tr>
+<tr>
+<td>合作</td>
+<td>Collaboration</td>
+<td>重载</td>
+<td>Overloading</td>
+</tr>
+<tr>
+<td>合作图</td>
+<td>Collaboration Diagram</td>
+<td>覆盖、重写</td>
+<td>Overriding</td>
+</tr>
+<tr>
+<td>通讯</td>
+<td>Communicate</td>
+<td>包</td>
+<td>Package</td>
+</tr>
+<tr>
+<td>组件</td>
+<td>Component</td>
+<td>参数</td>
+<td>Parameter</td>
+</tr>
+<tr>
+<td>组件图</td>
+<td>Component Diagram</td>
+<td>被动、消极的</td>
+<td>Passive</td>
+</tr>
+<tr>
+<td>组件框架</td>
+<td>Component Framework (CF)</td>
+<td>模式</td>
+<td>Pattern</td>
+</tr>
+<tr>
+<td>组件式开发</td>
+<td>Component-Based Development</td>
+<td>多态</td>
+<td>Polymorphism</td>
+</tr>
+<tr>
+<td>组合、组成</td>
+<td>Composition</td>
+<td>后续条件</td>
+<td>Post-Condition</td>
+</tr>
+<tr>
+<td>具体</td>
+<td>Concrete</td>
+<td>前置条件</td>
+<td>Pre-Condition</td>
+</tr>
+<tr>
+<td>限制、约束</td>
+<td>Constraint</td>
+<td>进程视图</td>
+<td>Process View</td>
+</tr>
+<tr>
+<td>构建</td>
+<td>Construction</td>
+<td>特性、性质</td>
+<td>Property</td>
+</tr>
+<tr>
+<td>构造方法、构造器</td>
+<td>Constructor</td>
+<td>限定、指定限制</td>
+<td>Qualifier</td>
+</tr>
+<tr>
+<td>控制</td>
+<td>Control</td>
+<td>关系</td>
+<td>Relationship</td>
+</tr>
+<tr>
+<td>建立</td>
+<td>Creation</td>
+<td>需求</td>
+<td>Requirement</td>
+</tr>
+<tr>
+<td>数据类型</td>
+<td>Data type</td>
+<td>返回</td>
+<td>Return</td>
+</tr>
+<tr>
+<td>相依</td>
+<td>Dependency</td>
+<td>角色</td>
+<td>Role</td>
+</tr>
+<tr>
+<td>部署图</td>
+<td>Deployment Diagram</td>
+<td>情节、使用场景（用例图）</td>
+<td>Scenario</td>
+</tr>
+<tr>
+<td>部署视图</td>
+<td>Deployment View</td>
+<td>顺序图、时序图</td>
+<td>Sequence Diagram</td>
+</tr>
+<tr>
+<td>设计</td>
+<td>Design</td>
+<td>方法规格</td>
+<td>Signature</td>
+</tr>
+<tr>
+<td>设计模式</td>
+<td>Design Pattern (DP)</td>
+<td>状态</td>
+<td>State</td>
+</tr>
+<tr>
+<td>摧毁</td>
+<td>Destruction</td>
+<td>状态机</td>
+<td>State Machine</td>
+</tr>
+<tr>
+<td>破坏、析构</td>
+<td>Destructor</td>
+<td>状态转移图</td>
+<td>State Transition Diagram</td>
+</tr>
+<tr>
+<td>鉴别器</td>
+<td>Discriminator</td>
+<td>静态</td>
+<td>Static</td>
+</tr>
+<tr>
+<td>动态</td>
+<td>Dynamic</td>
+<td>套用老套，使一成不变</td>
+<td>Stereotype</td>
+</tr>
+<tr>
+<td>封装</td>
+<td>Encapsulation</td>
+<td>结构</td>
+<td>Structure</td>
+</tr>
+<tr>
+<td>实体</td>
+<td>Entity</td>
+<td>子系统</td>
+<td>Subsystem</td>
+</tr>
+<tr>
+<td>事件</td>
+<td>Event</td>
+<td>泳道、区隔线</td>
+<td>Swimlane</td>
+</tr>
+<tr>
+<td>扩展</td>
+<td>Extend</td>
+<td>标注值、标记值</td>
+<td>Tagged Value</td>
+</tr>
+<tr>
+<td>外观、门面</td>
+<td>Facade</td>
+<td>模板</td>
+<td>Template</td>
+</tr>
+<tr>
+<td>结束状态</td>
+<td>Final State</td>
+<td>测试</td>
+<td>Test</td>
+</tr>
+<tr>
+<td>事件流程</td>
+<td>Flow Of Event</td>
+<td>追溯</td>
+<td>Trace</td>
+</tr>
+<tr>
+<td>控制焦点、焦点</td>
+<td>Focus of Control</td>
+<td>转移</td>
+<td>Transition</td>
+</tr>
+<tr>
+<td>框架</td>
+<td>Framework</td>
+<td>类型</td>
+<td>Type</td>
+</tr>
+<tr>
+<td>框架</td>
+<td>Framework</td>
+<td>统一模塑语言。UML</td>
+<td>Unified Modeling Language</td>
+</tr>
+<tr>
+<td>监视、守卫</td>
+<td>Guard</td>
+<td>使用</td>
+<td>Use</td>
+</tr>
+<tr>
+<td>实现</td>
+<td>Implementation</td>
+<td>用例</td>
+<td>Use Case</td>
+</tr>
+<tr>
+<td>实现视图</td>
+<td>Implementation View</td>
+<td>使用个案图</td>
+<td>Use Case Diagram</td>
+</tr>
+<tr>
+<td>包含</td>
+<td>Include</td>
+<td>使用个案观点</td>
+<td>Use-Case View</td>
+</tr>
+<tr>
+<td>基础框架</td>
+<td>Infrastructure Framework (IF)</td>
+<td>视图</td>
+<td>View</td>
+</tr>
+<tr>
+<td>继承</td>
+<td>Inheritance</td>
+<td>虚拟</td>
+<td>Virtual</td>
+</tr>
+<tr>
+<td>初始状态</td>
+<td>Initial State</td>
+<td>可见性</td>
+<td>Visibility</td>
+</tr>
+</tbody></table>
+</div><div class="recommend-area"><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 相关文章</span><br><span>  1.<a class="is-size-6" href="/2021/04/08/English-words/" target="_blank">English grammar  affix</a><br></span><span>  2.<a class="is-size-6" href="/2020/10/16/%E5%8D%9A%E5%AE%A2%E5%8A%A0%E8%AE%BEcoding%E5%B9%B3%E5%8F%B0%E8%AE%B0%E5%BD%95/" target="_blank">博客加设coding平台记录</a><br></span><span>  3.<a class="is-size-6" href="/2020/10/15/MBTI/" target="_blank">MBTI(迈尔斯布里格斯类型指标)</a><br></span><span>  4.<a class="is-size-6" href="/2020/09/14/R%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8/" target="_blank">R语言入门</a><br></span><span>  5.<a class="is-size-6" href="/2020/04/08/%E4%BC%9A%E8%80%85%E5%AE%9A%E7%A6%BB%EF%BC%8C%E4%B8%80%E6%9C%9F%E4%B8%80%E7%A5%88/" target="_blank">会者定离</a><br></span><span>  6.<a class="is-size-6" href="/2020/02/19/Linux%20%E5%91%BD%E4%BB%A4%E6%9D%82%E8%AE%B0/" target="_blank">Linux命令杂记</a><br></span></div></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/css/share.min.css"><div class="social-share"></div><script src="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/04/08/English-words/"><span class="level-item">English grammar  affix</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--><div class="card"><div class="card-content"><div class="title is-5">评论</div><div class="content" id="comment-container"></div><script>var valine = new Valine({
             el: '#comment-container' ,
             notify: true,
             verify: false,
@@ -14,7 +421,7 @@
             visitor: false,
             highlight: true,
             recordIP: false,
-            path:'/hidden/正则表达式.html',
+            path:'/2021/04/08/英语单词/',
             lang:'zh-CN',
             enableQQ:true,
             requiredFields:["nick","mail","link"]
