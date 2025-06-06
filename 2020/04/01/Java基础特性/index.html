@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Java基础语法及其特性 - Shimmer</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Shimmer"><meta name="msapplication-TileImage" content="/img/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Shimmer"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="This is for notes and diary"><meta property="og:type" content="blog"><meta property="og:title" content="Shimmer"><meta property="og:url" content="https://shimmer66.github.io/"><meta property="og:site_name" content="ShimmerのBlog"><meta property="og:description" content="This is for notes and diary"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://shimmer66.github.io/img/avatar.png"><meta property="article:published_time" content="2020-04-01T02:41:35.000Z"><meta property="article:modified_time" content="2025-05-24T08:23:09.118Z"><meta property="article:author" content="Shimmer"><meta property="article:tag" content="Java"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/avatar.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://shimmer66.github.io/2020/04/01/Java%E5%9F%BA%E7%A1%80%E7%89%B9%E6%80%A7/"},"headline":"Shimmer","image":["https://shimmer66.github.io/img/avatar.png"],"datePublished":"2020-04-01T02:41:35.000Z","dateModified":"2025-05-24T08:23:09.118Z","author":{"@type":"Person","name":"shimmer"},"description":"This is for notes and diary"}</script><link rel="icon" href="/img/favicon.png"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><script async="" referrerpolicy="no-referrer" src="//cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script src="/js/md5.min.js"></script><meta name="generator" content="Hexo 5.4.2"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/favicon.png" alt="Shimmer" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/self-talking">碎碎念</a><a class="navbar-item" href="/plan">复日</a><a class="navbar-item" href="/bookmarks">书签</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2020-04-01  <a class="commentCountImg" href="/2020/04/01/Java%E5%9F%BA%E7%A1%80%E7%89%B9%E6%80%A7/#comment-container"><span class="display-none-class">/2020/04/01/Java基础特性/</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="8211ddf5a461b24a0491e887c4b218f2">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>24 分钟  <i class="fas fa-pencil-alt"> </i>3.6 k</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">Java基础语法及其特性</h1><div class="content"><!--toc-->
+
+<h4 id="发展"><a href="#发展" class="headerlink" title="发展"></a>发展</h4><span id="more"></span>
+
+<h5 id="Java是一种面向对象的编程语言-现归属于ORACLE公司"><a href="#Java是一种面向对象的编程语言-现归属于ORACLE公司" class="headerlink" title="Java是一种面向对象的编程语言,现归属于ORACLE公司"></a>Java是一种面向对象的编程语言,现归属于ORACLE公司</h5><ul>
+<li>JVM[Java virtual machine]:Java虚拟机,Java技术的核心,实现Java的跨平台,包含Java运行环境JRE,Java工具和Java基础类库.</li>
+<li>JDK[Java Development Kit]:Java的软件开发工具包,在JDK的安装目录下有一个jre目录,里面有两个文件夹bin和lib,可以理解为bin里的就是jvm,lib里的就是jvm工作所需的类库,而jvm和lib结合起来称为jre.</li>
+<li>JRE[Java Runtime Environment]:Java运行环境,包含JVM标准实现及Java核心类库(不是开发环境,不包含开发工具,例如编译器,调试器).</li>
+</ul>
+<p>Java 编译:Java语言编写的源程序,先通过Java编译器,编译成与平台无关的’字节码程序’(.class文件,二进制程序)然后通过Java解释器 解释执行.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">javac hello.java  #编译成字节码文件.</span><br><span class="line">java hello        #解释字节码.  </span><br></pre></td></tr></table></figure>
+
+<p>运算符</p>
+<h5 id="算术运算符、"><a href="#算术运算符、" class="headerlink" title="算术运算符、"></a>算术运算符、</h5><h5 id="位运算符、"><a href="#位运算符、" class="headerlink" title="位运算符、"></a>位运算符、</h5><h5 id="逻辑运算符、"><a href="#逻辑运算符、" class="headerlink" title="逻辑运算符、"></a>逻辑运算符、</h5><h5 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h5><table>
+<thead>
+<tr>
+<th>位运算符</th>
+<th>名称</th>
+<th>描述</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&amp;</td>
+<td>按位与</td>
+<td>如果相对应位都是 1，则结果为 1，否则为 0</td>
+<td>（a＆b），得到 12，即 0000 1100</td>
+</tr>
+<tr>
+<td>丨</td>
+<td>按位或</td>
+<td>如果相对应位都是 0，则结果为 0，否则为 1</td>
+<td>（ a 丨 b ）得到 61，即 0011 1101</td>
+</tr>
+<tr>
+<td>^</td>
+<td>按位异或</td>
+<td>如果相对应位值相同，则结果为 0，否则为 1</td>
+<td>（a^b）得到 49，即 0011 0001</td>
+</tr>
+<tr>
+<td>~</td>
+<td>按位补</td>
+<td>翻转操作数的每一位，即 0 变成 1，1 变成 0</td>
+<td>（~a）得到 -61，即 1100 0011</td>
+</tr>
+<tr>
+<td>&lt;&lt;</td>
+<td>按位左移</td>
+<td>左操作数按位左移右操作数指定的位数</td>
+<td>a&lt;&lt;2 得到 240，即 1111 0000</td>
+</tr>
+<tr>
+<td>&gt;&gt;</td>
+<td>按位右移</td>
+<td>左操作数按位右移右操作数指定的位数</td>
+<td>a&gt;&gt;2 得到 15 即 1111</td>
+</tr>
+<tr>
+<td>&gt;&gt;&gt;</td>
+<td>按位右移补零</td>
+<td>左操作数的值按右操作数指定的位数右移，移动得到的空位以零填充</td>
+<td>a&gt;&gt;&gt;2 得到 15 即 0000 1111</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>逻辑运算符</th>
+<th>名称</th>
+<th>描述</th>
+<th>类型</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&amp;&amp; 或 &amp;</td>
+<td>与</td>
+<td>当且仅当两个操作数都为真，条件才为真</td>
+<td>双目运算符</td>
+<td>(a &amp;&amp; b) 或 (a &amp; b) 为假</td>
+</tr>
+<tr>
+<td>|| 或 |</td>
+<td>或</td>
+<td>两个操作数任何一个为真，条件为真</td>
+<td>双目运算符</td>
+<td>（a || b) 或 (a | b) 为真</td>
+</tr>
+<tr>
+<td>!</td>
+<td>非</td>
+<td>用来反转操作数的逻辑状态。如果条件为真，则逻辑非运算符将得到假</td>
+<td>单目运算符</td>
+<td>（!a）为假</td>
+</tr>
+<tr>
+<td>^</td>
+<td>异或</td>
+<td>如果两个操作数逻辑相同，则结果为假，否则为真</td>
+<td>双目运算符</td>
+<td>(a ^ b) 为真</td>
+</tr>
+<tr>
+<td>运算符优先级：</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p><img src="https://s1.ax1x.com/2020/09/05/wV0NXd.png" alt="优先级"></p>
+<p><img src="https://s1.ax1x.com/2020/09/05/wV0anA.png" alt="优先级"></p>
+<h4 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h4><h5 id="基本数据类型是CPU可以直接进行运算的类型。Java定义了以下几种基本数据类型："><a href="#基本数据类型是CPU可以直接进行运算的类型。Java定义了以下几种基本数据类型：" class="headerlink" title="基本数据类型是CPU可以直接进行运算的类型。Java定义了以下几种基本数据类型："></a>基本数据类型是CPU可以直接进行运算的类型。Java定义了以下几种基本数据类型：</h5><ul>
+<li><p>整数类型：byte，short，int，long</p>
+</li>
+<li><p>浮点数类型：float，double</p>
+</li>
+<li><p>字符类型：char</p>
+</li>
+<li><p>布尔类型：boolean</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">计算机内存的最小存储单元是字节（byte），</span><br><span class="line">一个字节就是一个8位二进制数，即8个bit。</span><br><span class="line">它的二进制表示范围从00000000~11111111，</span><br><span class="line">换算成十进制是0~255，</span><br><span class="line">换算成十六进制是00~ff。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">内存单元从0开始编号，称为内存地址。</span><br><span class="line">每个内存单元可以看作一间房间，内存地址就是门牌号。</span><br><span class="line"></span><br><span class="line">  0   1   2   3   4   5   6  ...</span><br><span class="line">┌───┬───┬───┬───┬───┬───┬───┐</span><br><span class="line">│   │   │   │   │   │   │   │...</span><br><span class="line">└───┴───┴───┴───┴───┴───┴───┘</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">一个字节是1byte，1024字节是1K，</span><br><span class="line">1024K是1M，1024M是1G，1024G是1T。</span><br><span class="line">一个拥有4T内存的计算机的字节数量就是：</span><br><span class="line"></span><br><span class="line">4T = 4 x 1024G</span><br><span class="line">   = 4 x 1024 x 1024M</span><br><span class="line">   = 4 x 1024 x 1024 x 1024K</span><br><span class="line">   = 4 x 1024 x 1024 x 1024 x 1024</span><br><span class="line">   = 4398046511104</span><br></pre></td></tr></table></figure>
+
+<h5 id="不同的数据类型占用的字节数不一样。我们看一下Java基本数据类型占用的字节数："><a href="#不同的数据类型占用的字节数不一样。我们看一下Java基本数据类型占用的字节数：" class="headerlink" title="不同的数据类型占用的字节数不一样。我们看一下Java基本数据类型占用的字节数："></a>不同的数据类型占用的字节数不一样。我们看一下Java基本数据类型占用的字节数：</h5> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">       ┌───┐</span><br><span class="line">  byte │   │</span><br><span class="line">       └───┘</span><br><span class="line">       ┌───┬───┐</span><br><span class="line"> short │   │   │</span><br><span class="line">       └───┴───┘</span><br><span class="line">       ┌───┬───┬───┬───┐</span><br><span class="line">   int │   │   │   │   │</span><br><span class="line">       └───┴───┴───┴───┘</span><br><span class="line">       ┌───┬───┬───┬───┬───┬───┬───┬───┐</span><br><span class="line">  long │   │   │   │   │   │   │   │   │</span><br><span class="line">       └───┴───┴───┴───┴───┴───┴───┴───┘</span><br><span class="line">       ┌───┬───┬───┬───┐</span><br><span class="line"> float │   │   │   │   │</span><br><span class="line">       └───┴───┴───┴───┘</span><br><span class="line">       ┌───┬───┬───┬───┬───┬───┬───┬───┐</span><br><span class="line">double │   │   │   │   │   │   │   │   │</span><br><span class="line">       └───┴───┴───┴───┴───┴───┴───┴───┘</span><br><span class="line">       ┌───┬───┐</span><br><span class="line">  char │   │   │</span><br><span class="line">       └───┴───┘</span><br><span class="line">	 </span><br><span class="line">byte恰好就是一个字节，而long和double需要8个字节。</span><br></pre></td></tr></table></figure>
+
+<p>对于整型类型，Java只定义了带符号的整型，因此，最高位的bit表示符号位（0表示正数，1表示负数）。各种整型能表示的最大范围如下：</p>
+<ul>
+<li>byte：-128 ~ 127</li>
+<li>short: -32768 ~ 32767</li>
+<li>int: -2147483648 ~ 2147483647</li>
+<li>long: -9223372036854775808 ~ 9223372036854775807</li>
+</ul>
+<h5 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h5><p>浮点类型的数就是小数，因为小数用科学计数法表示的时候，小数点是可以“浮动”的，如1234.5可以表示成12.345x102，也可以表示成1.2345x103，所以称为浮点数。</p>
+<p>下面是定义浮点数的例子：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">float f1 = 3.14f;</span><br><span class="line">float f2 = 3.14e38f; // 科学计数法表示的3.14x10^38</span><br><span class="line">double d = 1.79e308;</span><br><span class="line">double d2 = -1.79e308;</span><br><span class="line">double d3 = 4.9e-324; // 科学计数法表示的4.9x10^-324</span><br></pre></td></tr></table></figure>
+
+<p>对于float类型，需要加上f后缀。</p>
+<p>浮点数可表示的范围非常大，float类型可最大表示3.4x1038，而double类型可最大表示1.79x10308。</p>
+<h5 id="布尔类型"><a href="#布尔类型" class="headerlink" title="布尔类型"></a>布尔类型</h5><p>布尔类型boolean只有true和false两个值，布尔类型总是关系运算的计算结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">boolean b1 = true;</span><br><span class="line">boolean b2 = false;</span><br><span class="line">boolean isGreater = 5 &gt; 3; // 计算结果为true</span><br><span class="line">int age = 12;</span><br><span class="line">boolean isAdult = age &gt;= 18; // 计算结果为false</span><br></pre></td></tr></table></figure>
+
+<p>Java语言对布尔类型的存储并没有做规定，因为理论上存储布尔类型只需要1 bit，但是通常JVM内部会把boolean表示为4字节整数。</p>
+<h5 id="字符类型"><a href="#字符类型" class="headerlink" title="字符类型"></a>字符类型</h5><p>字符类型char表示一个字符。Java的char类型除了可表示标准的ASCII外，还可以表示一个Unicode字符：<br>注意char类型使用单引号’，且仅有一个字符，要和双引号”的字符串类型区分开。</p>
+<h5 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h5><p>除了上述基本类型的变量，剩下的都是引用类型。例如，引用类型最常用的就是String字符串：</p>
+<p>String s = “hello”;<br>引用类型的变量类似于C语言的指针，它内部存储一个“地址”，指向某个对象在内存的位置，后续我们介绍类的概念时会详细讨论。</p>
+<h5 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h5><p>定义变量的时候，如果加上final修饰符，这个变量就变成了常量：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">final double PI = 3.14; // PI是一个常量</span><br><span class="line">double r = 5.0;</span><br><span class="line">double area = PI * r * r;</span><br><span class="line">PI = 300; // compile error!</span><br></pre></td></tr></table></figure>
+
+<p>常量在定义时进行初始化后就不可再次赋值，再次赋值会导致编译错误。</p>
+<p>常量的作用是用有意义的变量名来避免魔术数字（Magic number），例如，不要在代码中到处写3.14，而是定义一个常量。如果将来需要提高计算精度，我们只需要在常量的定义处修改，例如，改成3.1416，而不必在所有地方替换3.14。</p>
+<p>根据习惯，常量名通常全部大写。</p>
+<h5 id="var关键字"><a href="#var关键字" class="headerlink" title="var关键字"></a>var关键字</h5><p>有些时候，类型的名字太长，写起来比较麻烦。例如：</p>
+<p><code>StringBuilder sb = new StringBuilder();</code><br>这个时候，如果想省略变量类型，可以使用var关键字：</p>
+<p><code>var sb = new StringBuilder();</code><br>编译器会根据赋值语句自动推断出变量sb的类型是StringBuilder。对编译器来说，语句：</p>
+<p><code>var sb = new StringBuilder();</code><br>实际上会自动变成：</p>
+<p><code>StringBuilder sb = new StringBuilder();</code><br>因此，使用var定义变量，仅仅是少写了变量类型而已。</p>
+<h4 id="命名规范"><a href="#命名规范" class="headerlink" title="命名规范"></a>命名规范</h4><p>#####规范是为了可读性，不是强制措施。<br>1,项目名全部小写<br>2,包名全部小写，点分隔符之间有且仅有一个自然语义的英语单词，包名统一单数形式，但类名如果有复数含义，类名可以用复数形式<br>3,类名首字母大写,其余组成词首字母依次大写<br>4,变量名,参数名，方法名首字母小写，如果名称由多个单词组成，除首字母外的每个单词的首字母都要大写<br>5.常量名全部大写，单词间下划线隔开。<br>6，命名规范遵从以下原则：</p>
+<ul>
+<li>名称只能由字母、下划线、数字、$符号组成。</li>
+<li>不能以数字开头</li>
+<li>名称不能使用Java中的关键字</li>
+<li>不允许出现中文及拼音命名</li>
+</ul>
+<p>7.抽象类名使用Abstract或Base开头，异常类命名使用Exception结尾；测试类名要以测试的类的名称开始，以Test结尾。例：AbstractClass、CommonException、DemoTest.<br>8.枚举类名带上Enum后缀，枚举成员名称需要全大写，单词间用下划线隔开。<br>例：枚举名字为ProcessStatusEnum的成员名称：SUCCESS 、 UNKNOWN_REASON</p>
+<h4 id="上转型"><a href="#上转型" class="headerlink" title="上转型"></a>上转型</h4><p>在继承关系中,会存在对象的<code>上转型</code>关系,例如 父类People,子类Asian,</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">People zhang= new People();</span><br><span class="line">Asian li =new Asian();</span><br><span class="line">zhang=li;   //称对象zhang是对象li的上转型对象</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>上转型对象不能操纵子类的新增成员,不能调用子类的新增方法</li>
+<li>上转型对象可以访问子类继承或隐藏的成员变量,可以调用子类继承或重写的实例方法,</li>
+<li>子类如果重写了父类的静态方法,那么子类对象的上转型对象不能调用子类重写的静态方法<br>,只能调用父类的静态方法</li>
+<li>上转型对象可以被强制转化为子类对象,</li>
+</ul>
+<h4 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h4><p>使用abstract修饰的类称为abstract类,</p>
+<ul>
+<li>abstract类不能用new运算符创建该类对象</li>
+<li>非抽象类中不能有abstract方法</li>
+<li>abstract 类的子类<ul>
+<li>其子类为非abstract类,则必须重写父类的abstract方法,给出方法体,<br>若为abstract类,可以继承,也可以重写<br>使用abstract修饰的方法称为abstract方法,</li>
+</ul>
+</li>
+<li>不允许使用final与abstract同时修饰一个类和方法,</li>
+<li>不允许使用static修饰abstract方法, </li>
+<li>abstract方法必须是实例方法<ul>
+<li>方法类型前有static的为类方法，反之则为实例方法</li>
+<li>实例方法在对象被创建后,被加载,</li>
+<li>类方法在类文件加载到内存时就已经创建</li>
+</ul>
+</li>
+<li>abstract方法,只允许声明,不允许实现</li>
+</ul>
+<p>蓝桥杯 B组,求黄金分割率(0.618)精确到100位小数.Java中,提供的最大整形范围是64位 <code>long</code>型整数</p>
+<p>java中能处理大数的类有两个,位于java.math包中,导入语句import java.math.*;</p>
+<!-- More-->
+
+<h5 id="高精度大整数-BigInteger"><a href="#高精度大整数-BigInteger" class="headerlink" title="高精度大整数: BigInteger."></a>高精度大整数: BigInteger.</h5><ul>
+<li><p>内部用一个int[] 数组来模拟一个非常大的整数.BigInteger.ONE… ZERO.. TEN分别代表1,0,10,</p>
+<p><code>赋值示例</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">BigInteger b=new BigInteger(<span class="string">&quot;1234567890&quot;</span>);</span><br><span class="line">BigInteger c=new BigInteger.ONE;</span><br><span class="line">BigInteger d=new BigInteger.ZERO;</span><br><span class="line">BigInteger e=BigInteger.valueOf(2);</span><br><span class="line">sysout(b.pow(5));       //此处简打输出函数</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>对BigInteger做运算的时候,只能使用实例方法add,multiply,divide,mod,subtract,abs,pow,gcd,compareTo.不能使用算术运算符(如+,-,*)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">BigInteger a=c.add(b);     // a=c+b</span><br><span class="line">BigInteger f=d.multiply(b.add(BigInteger.valueOf(8))) //f=d*(b+8)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>和<code>long</code>型整数运算比，<code>BigInteger</code>不会有范围限制，但缺点是速度比较慢。</p>
+<p>也可以把<code>BigInteger</code>转换成<code>long</code>型：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">BigInteger i = new BigInteger(&quot;123456789000&quot;);</span><br><span class="line">System.out.println(i.longValue()); // 123456789000</span><br><span class="line">System.out.println(i.multiply(i).longValueExact()); // java.lang.ArithmeticException: BigInteger out of long range</span><br></pre></td></tr></table></figure>
+
+<p>使用<code>longValueExact()</code>方法时，如果超出了<code>long</code>型的范围，会抛出<code>ArithmeticException</code>。</p>
+<p><code>BigInteger</code>和<code>Integer</code>、<code>Long</code>一样，也是不可变类，并且也继承自<code>Number</code>类。因为<code>Number</code>定义了转换为基本类型的几个方法：</p>
+<ul>
+<li>转换为<code>byte</code>：<code>byteValue()</code></li>
+<li>转换为<code>short</code>：<code>shortValue()</code></li>
+<li>转换为<code>int</code>：<code>intValue()</code></li>
+<li>转换为<code>long</code>：<code>longValue()</code></li>
+<li>转换为<code>float</code>：<code>floatValue()</code></li>
+<li>转换为<code>double</code>：<code>doubleValue()</code></li>
+</ul>
+<p>因此，通过上述方法，可以把<code>BigInteger</code>转换成基本类型。如果<code>BigInteger</code>表示的范围超过了基本类型的范围，转换时将丢失高位信息，即结果不一定是准确的。如果需要准确地转换成基本类型，可以使用<code>intValueExact()</code>、<code>longValueExact()</code>等方法，在转换时如果超出范围，将直接抛出<code>ArithmeticException</code>异常。</p>
+</li>
+</ul>
+<h5 id="高精度浮点数-BigDecimal"><a href="#高精度浮点数-BigDecimal" class="headerlink" title="高精度浮点数: BigDecimal"></a>高精度浮点数: BigDecimal</h5><ul>
+<li><p>BigDecimal用scale()表示小数位数,eg:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">BigDecimal d1=new BigDecimal(<span class="string">&quot;12345.67890&quot;</span>)</span><br><span class="line">BigDecimal d2=new BigDecimal(<span class="string">&quot;1234.5&quot;</span>)</span><br><span class="line">sysout(d1.scale())// 输出5</span><br><span class="line">sysout(d2.scale())//输出1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>stripTrailingZeros()方法可以将一个BigDecimal格式化为一个相等的,但去掉了末尾0的BigDecimal;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">BigDecimal d1 = new BigDecimal(<span class="string">&quot;123.4500&quot;</span>);</span><br><span class="line">BigDecimal d2 = d1.stripTrailingZeros();</span><br><span class="line">System.out.println(d1.scale()); // 4</span><br><span class="line">System.out.println(d2.scale()); // 2,因为去掉了00</span><br><span class="line"></span><br><span class="line">BigDecimal d3 = new BigDecimal(<span class="string">&quot;1234500&quot;</span>);</span><br><span class="line">BigDecimal d4 = d3.stripTrailingZeros();</span><br><span class="line">System.out.println(d3.scale()); // 0</span><br><span class="line">System.out.println(d4.scale()); // -2  例子转自廖雪峰</span><br></pre></td></tr></table></figure>
+
+<p>如果一个BigDecimal的scale()返回负数,例如,-2,表示这个数是个整数,并且末尾有2个0</p>
+</li>
+<li><p>BigDecimal 设置小数位长度</p>
+<ul>
+<li><p>BigDecimal.setScale()方法用于格式化小数点</p>
+</li>
+<li><p>setScale(1)表示保留一位小数,默认用四舍五入方式</p>
+</li>
+<li><p>setScale(1,BigDecimal.ROUND_DOWN)  //直接删除多余的小数位,如1.23-&gt;1.2</p>
+</li>
+<li><p>setScale(1,BigDecimal.ROUND_UP)  //进位处理,如1.23-&gt;1.2</p>
+</li>
+<li><p>setScale(1,BigDecimal.ROUND_HALF_UP)  //四舍五入</p>
+</li>
+<li><p>setScale(1,BigDecimal.ROUND_HALF_DOWN)  //四舍五入,小数位是5则是向下舍</p>
+</li>
+</ul>
+</li>
+<li><p>Java 四舍五入:观察前一位奇偶性,奇数,5入;偶数,5舍</p>
+</li>
+<li><p>dividerAndRemainder()方法,返回数组包含两个BigDecimal,分别是商和余数</p>
+</li>
+<li><p>capareTo()比较两个BigDecimal的值是否相等,而不能使用equals();</p>
+</li>
+</ul>
+</div><div class="recommend-area"></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/css/share.min.css"><div class="social-share"></div><script src="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2020/04/08/%E4%BC%9A%E8%80%85%E5%AE%9A%E7%A6%BB%EF%BC%8C%E4%B8%80%E6%9C%9F%E4%B8%80%E7%A5%88/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">会者定离，一期一祈。</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/03/23/Google%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F/"><span class="level-item">Google开发者模式</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--><div class="card"><div class="card-content"><div id="comment-container"><div class="gt-container"><h3 class="menu-label has-text-centered">此处评论已关，暂不支持评论。</h3></div></div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><!--!--><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/img/avatar.png" alt="Shimmer"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Shimmer</p><p class="is-size-6 is-block">愿你满眼闪着星光.</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>芬兰</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">50</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">9</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">26</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="/" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/shimmer66"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="/2279696120@qq.com"><i class="fa fa-envelope"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
+                                $.getJSON("https://v1.hitokoto.cn/", function (data) {
+                                if(data){
+                                    $('#hitokoto').html("");
+                                    $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
+                                    "<p>"+"来源《"+data.from+"》</p><p>提供者-"+data.creator+"</p>");
+                                }});}
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><!--!--><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-06-10T05:38:33.000Z">2024-06-10</time></p><p class="title"><a href="/2024/06/10/%E7%AB%AF%E5%8D%88%EF%BC%8C%E5%B9%B4%E4%B8%AD%E6%80%BB%E7%BB%93/">端午，年中总结</a></p><p class="categories"><a href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-06-06T12:34:28.000Z">2024-06-06</time></p><p class="title"><a href="/2024/06/06/Https%E8%A7%A3%E6%9E%90/">Https解析</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-08-19T15:39:21.000Z">2023-08-19</time></p><p class="title"><a href="/2023/08/19/%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E8%A1%8Cdjango%E7%AB%99%E7%82%B9/">新服务器运行django站点</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-10-28T10:25:49.000Z">2022-10-28</time></p><p class="title"><a href="/2022/10/28/python%E6%95%B4%E6%95%B0%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/">Python 整数缓存机制</a></p><p class="categories"><a href="/categories/Python/">Python</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-10-13T01:58:50.000Z">2022-10-13</time></p><p class="title"><a href="/2022/10/13/Python-GIL/">python GIL</a></p><p class="categories"><a href="/categories/Python/">Python</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/Git/"><span class="level-start"><span class="level-item">Git</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Hadoop/"><span class="level-start"><span class="level-item">Hadoop</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Java/"><span class="level-start"><span class="level-item">Java</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Python/"><span class="level-start"><span class="level-item">Python</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/auto-js/"><span class="level-start"><span class="level-item">auto.js</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"><span class="level-start"><span class="level-item">数据库</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E7%AC%94%E8%AE%B0/"><span class="level-start"><span class="level-item">笔记</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E7%AE%97%E6%B3%95/"><span class="level-start"><span class="level-item">算法</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E9%97%AE%E9%A2%98%E6%9D%82%E8%AE%B0/"><span class="level-start"><span class="level-item">问题杂记</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2024/06/"><span class="level-start"><span class="level-item">六月 2024</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2023/08/"><span class="level-start"><span class="level-item">八月 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/10/"><span class="level-start"><span class="level-item">十月 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/09/"><span class="level-start"><span class="level-item">九月 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/06/"><span class="level-start"><span class="level-item">六月 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/English/"><span class="tag">English</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Git/"><span class="tag">Git</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Centos7/"><span class="tag">Centos7</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Google%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F/"><span class="tag">Google开发者模式</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hadoop/"><span class="tag">Hadoop</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hbase/"><span class="tag">Hbase</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hive/"><span class="tag">Hive</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Java/"><span class="tag">Java</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux%E5%91%BD%E4%BB%A4%E6%9D%82%E8%AE%B0/"><span class="tag">Linux命令杂记</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Nginx/"><span class="tag">Nginx</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python%E7%88%AC%E8%99%AB/"><span class="tag">Python爬虫</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/R/"><span class="tag">R</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SQL/"><span class="tag">SQL</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/VMware16/"><span class="tag">VMware16</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Zookeeper/"><span class="tag">Zookeeper</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/coding/"><span class="tag">coding</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/flume/"><span class="tag">flume</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kafaka/"><span class="tag">kafaka</span><span class="tag is-grey-lightest">1</span></a></div></div><div class="field is-grouped is-grouped-multiline"><a class="tags has-addons" href="/tags/"><span class="tag">查看全部&gt;&gt;</span></a></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=undefined&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div><p class="help">输入邮箱开始订阅，更博后邮件通知！</p></form></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/favicon.png" alt="Shimmer" height="28"></a><p class="size-small"><span>&copy; 2025 Shimmer</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© <a href="http://www.beian.miit.gov.cn/" target="_blank">豫ICP备20008890号</a><br></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+            var n = new Date(time);
+            now.setTime(now.getTime() + 250),
+                days = (now - n) / 1e3 / 60 / 60 / 24,
+                dnum = Math.floor(days),
+                hours = (now - n) / 1e3 / 60 / 60 - 24 * dnum,
+                hnum = Math.floor(hours),
+            1 == String(hnum).length && (hnum = "0" + hnum),
+                minutes = (now - n) / 1e3 / 60 - 1440 * dnum - 60 * hnum,
+                mnum = Math.floor(minutes),
+            1 == String(mnum).length && (mnum = "0" + mnum),
+                seconds = (now - n) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
+                snum = Math.round(seconds),
+            1 == String(snum).length && (snum = "0" + snum),
+                document.getElementById("statistic-times").innerHTML = "❤️本站自 <strong>"+time.split(" ")[0].replace(/\//g,".")+"</strong> 已运行 <strong>" + dnum + "</strong> 天 <strong>" + hnum + "</strong> 小时 <strong>" + mnum + "</strong> 分 <strong>" + snum + "</strong> 秒！❤️";
+        }var now = new Date();setInterval("createTime('2020/2/11 00:00:00')", 250,"");</script><br></span><div class="size-small"><span>❤️感谢 <strong><span id="busuanzi_value_site_uv">99+</span></strong> 小伙伴的 <strong><span id="busuanzi_value_site_pv">99+</span></strong> 次光临！❤️</span></div></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script>$.getScript('/js/comment-issue-data.js',function(){loadIssueData('4tTsC8HmiyJQG59GHsUd8b1l-gzGzoHsz','6znscAznUYtzHrdGAGKvPrag','Shimmer','undefined',true);})</script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script><script type="text/javascript">var pjax = new Pjax({
+            elements: "a",//代表点击链接就更新
+            selectors: [  //代表要更新的节点
+                ".section",
+                "title"
+            ],
+            cache: true,
+            cacheBust:false
+        })
+
+        function loadBusuanzi(){
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", function () {});
+        }
+
+        // 开始 PJAX 执行的函数
+        document.addEventListener('pjax:send', function () {
+        });
+        
+        // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+        document.addEventListener('pjax:complete', function () {
+            $(".section").css({opacity:1});
+            if(false){
+                $.getScript('/js/comment-issue-data.js',function(){loadIssueData('4tTsC8HmiyJQG59GHsUd8b1l-gzGzoHsz','6znscAznUYtzHrdGAGKvPrag','Shimmer','undefined',true);});
+            }
+            if(false){
+                loadMathJax();
+            }
+            loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
+            loadBackTop();
+            loadBusuanzi();
+            if(typeof loadBanner == 'function'){
+                loadBanner();
+            }
+        });</script></body></html>
