@@ -1,0 +1,121 @@
+<!--
+此文件仅用于参考Valine的HTML结构，不会在网站中使用
+它有助于理解各个CSS类的层级关系
+-->
+
+<!-- 评论区容器 -->
+<div class="v">
+  <!-- 评论计数 -->
+  <div class="vcount">
+    <span class="vnum">0</span> 评论
+  </div>
+  
+  <!-- 评论输入表单 -->
+  <div class="vwrap">
+    <!-- 头部字段 -->
+    <div class="vheader">
+      <input class="vinput" placeholder="昵称" />
+      <input class="vinput" placeholder="邮箱" />
+      <input class="vinput" placeholder="网址" />
+    </div>
+    
+    <!-- 评论编辑框 -->
+    <div class="veditor-area">
+      <textarea class="veditor" placeholder="说点什么..."></textarea>
+    </div>
+    
+    <!-- 评论工具栏 -->
+    <div class="vcontrol">
+      <div class="col-left">
+        <span class="vemoji-btn">表情</span>
+        <span class="vpreview-btn">预览</span>
+      </div>
+      <div class="col-right">
+        <button class="vsubmit">提交</button>
+      </div>
+    </div>
+    
+    <!-- 加密评论选项 (我们添加的) -->
+    <div class="vencrypt-container">
+      <div class="vencrypt-toggle">
+        <input type="checkbox" id="vencrypt-enable" />
+        <label for="vencrypt-enable">加密此评论</label>
+      </div>
+      <div class="vencrypt-password">
+        <input type="password" id="vencrypt-password" placeholder="输入加密密码" />
+      </div>
+    </div>
+  </div>
+  
+  <!-- 评论列表 -->
+  <div class="vlist">
+    <!-- 单个评论 -->
+    <div class="vcard">
+      <!-- 评论者头像 -->
+      <img class="vimg" src="avatar.jpg" />
+      
+      <!-- 评论内容区 -->
+      <div class="vh">
+        <!-- 评论者信息 -->
+        <div class="vhead">
+          <a class="vnick" href="#">评论者昵称</a>
+          <span class="vsys">Chrome</span>
+          <span class="vsys">Windows</span>
+        </div>
+        
+        <!-- 评论内容 -->
+        <div class="vcontent">
+          <p>这是评论内容</p>
+        </div>
+        
+        <!-- 评论元数据 -->
+        <div class="vmeta">
+          <span class="vtime">2023-01-01</span>
+          <span class="vat">回复</span>
+        </div>
+        
+        <!-- 子评论列表 -->
+        <div class="vreply-wrapper">
+          <div class="vlist">
+            <!-- 子评论项 (结构与父评论相同) -->
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 加密评论示例 -->
+    <div class="vcard">
+      <img class="vimg" src="avatar.jpg" />
+      <div class="vh">
+        <div class="vhead">
+          <a class="vnick" href="#">加密评论者</a>
+          <span class="vsys">Chrome</span>
+        </div>
+        
+        <!-- 加密评论内容 -->
+        <div class="vcontent">
+          <div class="vencrypted-comment" data-comment-id="commentId">
+            <p class="vencrypted-tip">此评论已加密，请输入密码查看</p>
+            <div class="vencrypted-form">
+              <input type="password" class="vencrypted-password" placeholder="输入密码解锁" />
+              <button class="vencrypted-submit">解锁</button>
+            </div>
+            <div class="vdecrypted-content" style="display:none;">
+              <!-- 解密后的内容将显示在这里 -->
+            </div>
+          </div>
+        </div>
+        
+        <div class="vmeta">
+          <span class="vtime">2023-01-01</span>
+          <span class="vat">回复</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 加载更多 -->
+  <div class="vpage">
+    <button class="vmore">加载更多...</button>
+  </div>
+</div> 
