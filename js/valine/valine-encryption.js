@@ -111,6 +111,72 @@
       // 默认配置
       this.config.encryptionPrompt = this.config.encryptionPrompt || '此评论已加密，请输入密码查看';
       
+      // 添加样式
+      const style = document.createElement('style');
+      style.innerHTML = `
+        .vencrypt-container {
+          margin: 10px 0;
+          padding: 8px;
+          border-radius: 6px;
+          background-color: #f8f8f8;
+        }
+        .vencrypt-toggle {
+          display: flex;
+          align-items: center;
+        }
+        .vencrypt-toggle input {
+          margin-right: 5px;
+        }
+        .vencrypt-password {
+          margin-top: 8px;
+        }
+        .vencrypt-password input {
+          width: 100%;
+          padding: 6px 8px;
+          border: 1px solid #ddd;
+          border-radius: 3px;
+        }
+        .vencrypted-comment {
+          padding: 10px;
+          background-color: #f0f0f0;
+          border-radius: 6px;
+          margin: 5px 0;
+        }
+        .vencrypted-tip {
+          color: #888;
+          font-style: italic;
+          margin: 0 0 10px 0;
+        }
+        .vencrypted-form {
+          display: flex;
+        }
+        .vencrypted-password {
+          flex: 1;
+          padding: 6px 8px;
+          border: 1px solid #ddd;
+          border-radius: 3px 0 0 3px;
+        }
+        .vencrypted-submit {
+          border: 1px solid #ddd;
+          border-left: none;
+          background-color: #f0f0f0;
+          padding: 6px 12px;
+          border-radius: 0 3px 3px 0;
+          cursor: pointer;
+        }
+        .vencrypted-submit:hover {
+          background-color: #e0e0e0;
+        }
+        .vdecrypted-content {
+          margin-top: 10px;
+          padding: 10px;
+          background-color: #f9f9f9;
+          border-radius: 6px;
+          border-left: 3px solid #42b983;
+        }
+      `;
+      document.head.appendChild(style);
+      
       // 添加加密选项到评论表单
       const postEl = el.querySelector('.vpost');
       if (!postEl) return this;

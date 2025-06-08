@@ -1,8 +1,11 @@
 // 评论issues仓库 by.removeif https://removeif.github.io/
 var repoIssuesUrl = "https://api.github.com/repos/Shimmer66/Comment/issues";
 // 对应仓库 clientId、clientSecret 关于这两个参数的安全问题，查看 https://removeif.github.io/2019/09/19/博客源码分享.html#1-热门推荐，最新评论：
-var clientId="808fab96f744535a5da1";
-var clientSecret="0d26b5157c8d2a5d6154975e9c17dd673bf7e671";
+// 移除硬编码的敏感信息，改为从参数获取
+// var clientId="808fab96f744535a5da1";
+// var clientSecret="0d26b5157c8d2a5d6154975e9c17dd673bf7e671";
+var clientId;
+var clientSecret;
 // var authorizationToken = 'Basic ' + btoa(clientId + ':' + clientSecret);
 // 写comment count值
 var reqCommentCountUrl;
@@ -258,6 +261,11 @@ function renderValineComment(valine, ADMIN_NAME) {
 }
 
 function loadIssueData(appId, appKey, userName, userRepo, isValine) {
+    // 设置全局变量
+    if (!isValine && appId && appKey) {
+        clientId = appId;
+        clientSecret = appKey;
+    }
 
     setTimeout(function () { // 延迟1s执行，保证其余的先加载
         var COMMENT_ARR = {};
@@ -333,6 +341,18 @@ function loadIssueData(appId, appKey, userName, userRepo, isValine) {
         }
         // console.clear();
         console.log("~~~~欢迎光临！记得有时间多来看看哦 ~~~~")
+        
+        // 如果是Valine评论系统，确保加密功能正确初始化
+        if (isValine && typeof ValineCrypto !== 'undefined') {
+            setTimeout(function() {
+                const valineContainer = document.querySelector('#comment-container .v');
+                if (valineContainer && !valineContainer.querySelector('.v-encrypt-checkbox')) {
+                    console.log('comment-issue-data.js: 检测到Valine容器，尝试初始化加密功能');
+                    ValineCrypto.enhanceValineForm(valineContainer);
+                    ValineCrypto.processComments(valineContainer);
+                }
+            }, 2000);
+        }
     }
         ,
         500
