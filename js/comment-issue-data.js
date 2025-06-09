@@ -346,7 +346,7 @@ function loadIssueData(appId, appKey, userName, userRepo, isValine) {
         if (isValine && typeof ValineCrypto !== 'undefined') {
             setTimeout(function() {
                 const valineContainer = document.querySelector('#comment-container .v');
-                if (valineContainer && !valineContainer.querySelector('.v-encrypt-checkbox')) {
+                if (valineContainer && !valineContainer.querySelector('.v-encrypt-option')) {
                     console.log('comment-issue-data.js: 检测到Valine容器，尝试初始化加密功能');
                     ValineCrypto.enhanceValineForm(valineContainer);
                     ValineCrypto.processComments(valineContainer);
