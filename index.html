@@ -1,22 +1,436 @@
 <!doctype html>
 <html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Shimmer</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Shimmer"><meta name="msapplication-TileImage" content="/img/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Shimmer"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="This is for notes and diary"><meta property="og:type" content="blog"><meta property="og:title" content="Shimmer"><meta property="og:url" content="https://shimmer66.github.io/"><meta property="og:site_name" content="ShimmerのBlog"><meta property="og:description" content="This is for notes and diary"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://shimmer66.github.io/img/avatar.png"><meta property="article:author" content="Shimmer"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/avatar.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://shimmer66.github.io"},"headline":"Shimmer","image":["https://shimmer66.github.io/img/avatar.png"],"author":{"@type":"Person","name":"shimmer"},"description":"This is for notes and diary"}</script><link rel="icon" href="/img/favicon.png"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><script async="" referrerpolicy="no-referrer" src="//cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script><script src="/js/Valine.min.js"></script><script src="/js/md5.min.js"></script><meta name="generator" content="Hexo 5.4.2"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/favicon.png" alt="Shimmer" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item is-active" href="/">首页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/self-talking">碎碎念</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2025-07-30  <a class="commentCountImg" href="/2025/07/30/%E4%BB%A3%E7%90%86%E8%BD%AF%E4%BB%B6/#comment-container"><span class="display-none-class">/2025/07/30/代理软件/</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="fda69ebb97c24283163a594a068a6940">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>1 分钟  <i class="fas fa-pencil-alt"> </i>0.1 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/07/30/%E4%BB%A3%E7%90%86%E8%BD%AF%E4%BB%B6/">代理软件</a></h1><div class="content"><p>这几天在使用Augment code(AI编程工具)来完成项目中一些代码模块的开发工作，闲鱼上有不少号商出售Augment code重置本地环境、自动注册、切换账号绕过风控的插件。我很好奇他们使用了相关的哪些技术来绕过风控，具体的原理是什么。</p>
 <p>涉及软件逆向、设备指纹、网络代理、OAUTH2.0认证等多项技术，先留个坑后续更新吧！</p>
-</div><div class="index-category-tag">  <hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2025-06-16  <a class="commentCountImg" href="/2025/06/16/Cursor%E4%BD%BF%E7%94%A8%20%E4%BD%93%E9%AA%8C/#comment-container"><span class="display-none-class">/2025/06/16/Cursor使用 体验/</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="1f0ffb2831b6b4e449821495ce708dc1">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>21 分钟  <i class="fas fa-pencil-alt"> </i>3.2 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/06/16/Cursor%E4%BD%BF%E7%94%A8%20%E4%BD%93%E9%AA%8C/">聊一聊Cursor，AI IDE 如何提升开发效率与体验</a></h1><div class="content"><p>在人工智能不断演进的今天，各类 AI 编程工具正逐渐改变我们编码的方式。作为一名计算机行业的从业者，我在 2025 年上半年深入使用了 Cursor 这一编程工具，从一开始的试探性接触，到后来将它纳入日常开发流程，用它完成了包括微信小程序和 Java CURD 系统在内的多个实际项目。</p></div><div class="index-category-tag">  <hr></div><div class="level is-mobile is-flex"><div class="level-start"><div class="level-item"><a class="article-more button is-small size-small" href="/2025/06/16/Cursor%E4%BD%BF%E7%94%A8%20%E4%BD%93%E9%AA%8C/#more">阅读更多&gt;&gt;</a></div></div></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2024-06-10  <a class="commentCountImg" href="/2024/06/10/%E7%AB%AF%E5%8D%88%EF%BC%8C%E5%B9%B4%E4%B8%AD%E6%80%BB%E7%BB%93/#comment-container"><span class="display-none-class">/2024/06/10/端午，年中总结/</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="b49a3d49ce33ff0742c0a4eb4deb49a7">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>10 分钟  <i class="fas fa-pencil-alt"> </i>1.5 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/06/10/%E7%AB%AF%E5%8D%88%EF%BC%8C%E5%B9%B4%E4%B8%AD%E6%80%BB%E7%BB%93/">端午，年中总结</a></h1><div class="content"><p>暑气渐浓，转眼已是年中。翻出年初时写下的目标，对照这半年的经历，是时候做一番回顾了。</p></div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></div>  <hr></div><div class="level is-mobile is-flex"><div class="level-start"><div class="level-item"><a class="article-more button is-small size-small" href="/2024/06/10/%E7%AB%AF%E5%8D%88%EF%BC%8C%E5%B9%B4%E4%B8%AD%E6%80%BB%E7%BB%93/#more">阅读更多&gt;&gt;</a></div></div></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2024-06-06  <a class="commentCountImg" href="/2024/06/06/Https%E8%A7%A3%E6%9E%90/#comment-container"><span class="display-none-class">/2024/06/06/Https解析/</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="b772d8a4854cfaff6ac6ebeeb5393d28">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>21 分钟  <i class="fas fa-pencil-alt"> </i>3.2 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/06/06/Https%E8%A7%A3%E6%9E%90/">Https 浅解</a></h1><div class="content"><p>传统的HTTP (Hypertext Transfer Protocol) 协议在数据传输过程中是<strong>明文</strong>的，这意味着任何恶意的第三方都可以轻易地窃听、篡改或伪造通信内容，给用户隐私和数据安全带来巨大风险。</p></div><div class="index-category-tag">  <hr></div><div class="level is-mobile is-flex"><div class="level-start"><div class="level-item"><a class="article-more button is-small size-small" href="/2024/06/06/Https%E8%A7%A3%E6%9E%90/#more">阅读更多&gt;&gt;</a></div></div></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2024-05-30  <a class="commentCountImg" href="/2024/05/30/%E5%8C%BA%E5%9D%97%E9%93%BE%E8%AE%B2%E8%A7%A3/#comment-container"><span class="display-none-class">/2024/05/30/区块链讲解/</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="d242ac62a1c03c34e6d98db91a1c4a06">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>19 分钟  <i class="fas fa-pencil-alt"> </i>2.9 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/05/30/%E5%8C%BA%E5%9D%97%E9%93%BE%E8%AE%B2%E8%A7%A3/">扒一扒比特币</a></h1><div class="content"><p>2008年，一个化名中本聪的人在一篇白皮书里，提出了一个看似简单却极具野心的构想：创建一种点对点的电子货币，让两个人可以不必依赖银行或其他金融中介，直接完成支付。十多年过去，比特币从一行行代码、一纸构想，渐渐长成了一个真实运转的全球性网络。它既带着对传统金融信任模式的深刻质疑，也让我们看到，技术的理想与现实世界的制度之间，始终存在着拉扯与张力。</p></div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%91%E6%99%AE/">技术科普</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/">区块链</a><span> </span><a class="article-more button is-small link-muted index-tags" href="/tags/%E6%AF%94%E7%89%B9%E5%B8%81/">比特币</a><span> </span><a class="article-more button is-small link-muted index-tags" href="/tags/%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96/">去中心化</a><span> </span><a class="article-more button is-small link-muted index-tags" href="/tags/%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81/">加密货币</a></div><hr></div><div class="level is-mobile is-flex"><div class="level-start"><div class="level-item"><a class="article-more button is-small size-small" href="/2024/05/30/%E5%8C%BA%E5%9D%97%E9%93%BE%E8%AE%B2%E8%A7%A3/#more">阅读更多&gt;&gt;</a></div></div></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2023-08-19  <a class="commentCountImg" href="/2023/08/19/%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E8%A1%8Cdjango%E7%AB%99%E7%82%B9/#comment-container"><span class="display-none-class">/2023/08/19/新服务器运行django站点/</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="671ddabf096e7b17d4e0169b8dfe4fd3">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>10 分钟  <i class="fas fa-pencil-alt"> </i>1.5 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/08/19/%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E8%A1%8Cdjango%E7%AB%99%E7%82%B9/">新服务器运行django站点</a></h1><div class="content"><p>远程登录服务器</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo ssh root@user_name</span><br><span class="line">#删除 原来的ssh密钥命令</span><br><span class="line">ssh-keygen -f &quot;/home/shimmer/.ssh/known_hosts&quot; -R &quot;117.72.9.46&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div><div class="index-category-tag">  <hr></div><div class="level is-mobile is-flex"><div class="level-start"><div class="level-item"><a class="article-more button is-small size-small" href="/2023/08/19/%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E8%A1%8Cdjango%E7%AB%99%E7%82%B9/#more">阅读更多&gt;&gt;</a></div></div></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2023-06-12  <a class="commentCountImg" href="/2023/06/12/CORS%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/#comment-container"><span class="display-none-class">/2023/06/12/CORS跨域问题详解/</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="3f8a2e684b5c404f2eb7c48b8b6d9adf">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>16 分钟  <i class="fas fa-pencil-alt"> </i>2.4 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/06/12/CORS%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/">CORS跨域问题详解</a></h1><div class="content"><p>在前后端分离开发中，我们常常遇到一个令人头疼的问题——跨域（CORS，Cross-Origin Resource Sharing）。明明接口地址、请求方法都没问题，却无法访问后端服务。</p>
-<h2 id="什么是跨域"><a href="#什么是跨域" class="headerlink" title="什么是跨域"></a>什么是跨域</h2><p>跨域（Cross-Origin）指的是当前网页向与其协议、域名或端口三者中任意一个不同的目标发起的请求。<br>如果请求的资源不属于同源范围（<strong>协议、域名、端口</strong>三者中有<strong>任意一个</strong>不同），浏览器会根据同源策略限制该跨域请求。需要注意的是：</p>
+</div><div class="index-category-tag">  <hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2025-07-15  <a class="commentCountImg" href="/2025/07/15/MIT6.5840%E5%88%86%E5%B8%83%E5%BC%8FKV%E6%9C%8D%E5%8A%A1/#comment-container"><span class="display-none-class">/2025/07/15/MIT6.5840分布式KV服务/</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="27f7cf4eea6b70bacec7f7ca91ef78e6">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>32 分钟  <i class="fas fa-pencil-alt"> </i>4.8 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/07/15/MIT6.5840%E5%88%86%E5%B8%83%E5%BC%8FKV%E6%9C%8D%E5%8A%A1/">MIT6.5840学习总结</a></h1><div class="content"><p>最初接触这个项目是为了学 Go语言——我觉得从项目入手学一门语言是最快的方式。虽然这种做法难以搭建起完整的系统化认知框架，但系统性地学一门语言又太耗时间了，所以权衡下来这是个不错的折中。后来，我在百度找到了这个项目，没想到难度还是挺大的：项目提供了框架、详尽说明和测试用例，我只需实现核心逻辑，但整体工作量还是不小，实际花费的时间也远超预期。</p>
+<p>好在也学到了点东西：掌握了 Go 的基础语法，理解了协程、通道和同步机制的使用方式，也对分布式系统有了初步认识，明白了共识算法如何生效、CAP 定理的权衡等。这个项目共包含五个实验，每个实验又分成多个章节。</p>
+<h2 id="项目设计特点"><a href="#项目设计特点" class="headerlink" title="项目设计特点"></a>项目设计特点</h2><p>这个项目的精妙之一，在于它通过单机模拟的方式，为学习者构建了一个高度逼真且易于调试的分布式系统实验环境。在实际部署中，分布式系统的各个节点通常运行在不同的物理机器上。而在此项目中，多个节点（如多个 Raft 服务器副本、多个 MapReduce Worker）是以多个独立进程的形式，在同一台机器上启动的。</p>
+<p>为了模拟真实的网络通信，项目提供了一个封装好的 RPC（远程过程调用）框架。这个框架至关重要，它让我们无需深入底层网络编程（如 Socket 管理、数据序列化与反序列化等），只需像调用本地函数一样定义和调用服务，框架会自动处理进程间的通信细节。</p>
+<p>更重要的是，这个 RPC 框架并不仅仅是简单的进程间通信桥梁。为了重现分布式环境的复杂性，它在底层引入了各种网络故障，例如：</p>
 <ul>
-<li>同源策略是<strong>浏览器</strong>的安全机制，不是服务器的限制</li>
-<li>不同浏览器对同源策略的具体实施可能存在细微差异</li>
-<li>该问题的解决需要<strong>后端服务器</strong>配置CORS响应头来允许跨域请求，这涉及前后端的协作</div><div class="index-category-tag">  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/CORS/">CORS</a><span> </span><a class="article-more button is-small link-muted index-tags" href="/tags/%E8%B7%A8%E5%9F%9F/">跨域</a><span> </span><a class="article-more button is-small link-muted index-tags" href="/tags/%E5%AE%89%E5%85%A8/">安全</a></div><hr></div><div class="level is-mobile is-flex"><div class="level-start"><div class="level-item"><a class="article-more button is-small size-small" href="/2023/06/12/CORS%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/#more">阅读更多&gt;&gt;</a></div></div></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2022-09-06  <a class="commentCountImg" href="/2022/09/06/%E9%80%9A%E4%BF%97%E8%A7%A3%E9%87%8Anginx/#comment-container"><span class="display-none-class">/2022/09/06/通俗解释nginx/</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="f100c2f86d0467aabeea7ddb5460c49c">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>10 分钟  <i class="fas fa-pencil-alt"> </i>1.5 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/09/06/%E9%80%9A%E4%BF%97%E8%A7%A3%E9%87%8Anginx/">小白的nginx指南</a></h1><div class="content"><p><strong>Nginx</strong> 是一个高性能的开源web和反向代理服务器，也可以用作电子邮件（IMAP/POP3）代理服务器。它的主要特点包括占用资源少、并发性高、可扩展性强以及对高负载环境的稳定性。</p></div><div class="index-category-tag">  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/Nginx/">Nginx</a></div><hr></div><div class="level is-mobile is-flex"><div class="level-start"><div class="level-item"><a class="article-more button is-small size-small" href="/2022/09/06/%E9%80%9A%E4%BF%97%E8%A7%A3%E9%87%8Anginx/#more">阅读更多&gt;&gt;</a></div></div></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2022-04-08  <a class="commentCountImg" href="/2022/04/08/%E5%85%B3%E9%94%AE%E8%AF%8D%E6%8F%90%E5%8F%96%E7%AE%97%E6%B3%95/#comment-container"><span class="display-none-class">/2022/04/08/关键词提取算法/</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="f0459e21854d249587676dbb4af6d7ba">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>15 分钟  <i class="fas fa-pencil-alt"> </i>2.3 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/04/08/%E5%85%B3%E9%94%AE%E8%AF%8D%E6%8F%90%E5%8F%96%E7%AE%97%E6%B3%95/">关键词提取算法</a></h1><div class="content"><p>关键词是揭示文档核心主题的最小语义单元，对于理解文本内容至关重要。关键词自动抽取技术致力于自动识别和提取这些具有高度意义和代表性的词汇或短语，实现了自动化的关键词识别过程。在文本挖掘领域，这一技术被称为关键词抽取（Keyword Extraction），而在信息检索领域，它通常被称作自动标引（Automatic Indexing）。关键词提取作为文献检索、自动摘要、文本分类、推荐系统等多个领域的关键任务，为这些应用提供了基础性的支持。</p></div><div class="index-category-tag">  <hr></div><div class="level is-mobile is-flex"><div class="level-start"><div class="level-item"><a class="article-more button is-small size-small" href="/2022/04/08/%E5%85%B3%E9%94%AE%E8%AF%8D%E6%8F%90%E5%8F%96%E7%AE%97%E6%B3%95/#more">阅读更多&gt;&gt;</a></div></div></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2022-01-03  <a class="commentCountImg" href="/2022/01/03/deepin%20wine%20QQ%E6%B1%89%E5%AD%97%E6%98%BE%E7%A4%BA%E6%96%B9%E5%9D%97%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/#comment-container"><span class="display-none-class">/2022/01/03/deepin wine QQ汉字显示方块解决方案/</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="192cd69e8d165023f9222092015ff3cb">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>几秒  <i class="fas fa-pencil-alt"> </i>0.0 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/01/03/deepin%20wine%20QQ%E6%B1%89%E5%AD%97%E6%98%BE%E7%A4%BA%E6%96%B9%E5%9D%97%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">deepin wine QQ汉字显示方块解决方案</a></h1><div class="content"><p><a target="_blank" rel="noopener" href="https://github.com/Fangyh09/font-ttf/blob/master/simsun.ttc">simsun字体(宋体)</a>复制到   /usr/share/fonts/目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">mv</span> simsun.ttf    /usr/share/fonts/</span><br></pre></td></tr></table></figure>
-</div><div class="index-category-tag">  <hr></div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous is-invisible is-hidden-mobile"><a href="/page/0/">上一页</a></div><div class="pagination-next"><a href="/page/2/">下一页</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link is-current" href="/">1</a></li><li><a class="pagination-link" href="/page/2/">2</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/6/">6</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><!--!--><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/img/avatar.png" alt="Shimmer"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Shimmer</p><p class="is-size-6 is-block">做正确的事</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>芬兰</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">54</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">11</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">37</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="/" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/shimmer66"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="/2279696120@qq.com"><i class="fa fa-envelope"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
+<li><strong>网络延迟</strong>：随机地延迟 RPC 请求或响应</li>
+<li><strong>消息丢失</strong>：随机地丢弃 RPC 请求，模拟网络不可靠</li>
+<li><strong>重复请求</strong>：模拟因超时重传而导致的重复消息</li>
+</ul>
+<p>正是通过这些有意的”破坏”，我们的代码才必须被设计成能够容错的——例如，Raft 算法需要处理丢失的 AppendEntries RPC，KV 服务器需要处理重复的 Put 请求。因此，我们虽然身处一个稳定的单机环境，但所编写的每一行代码，都在应对一个充满不确定性的”真实”分布式世界。这种设计使得我们能够将全部精力集中在分布式核心逻辑（如共识、状态复制、容错）的实现上，而非基础设施的构建。</p>
+<h2 id="实验概览"><a href="#实验概览" class="headerlink" title="实验概览"></a>实验概览</h2><h3 id="MapReduce"><a href="#MapReduce" class="headerlink" title="MapReduce"></a>MapReduce</h3><p><strong>要求</strong>：实现一个分布式的MapReduce框架。项目中已经编写好了mapreduce函数，我们需要编写协调器（Coordinator）和工人（Worker）程序。协调器负责将任务分发给空闲的工人，并处理故障恢复——当某个工人节点长时间无响应时，协调器需要将其任务重新调度给其他工人。关键在于协调器的状态管理（任务分配、完成状态跟踪）和工人节点的容错机制，最终确保所有任务都能被正确执行和汇总。</p>
+<h4 id="测试情景与设计思想"><a href="#测试情景与设计思想" class="headerlink" title="测试情景与设计思想"></a>测试情景与设计思想</h4><p>课程自带的测试代码相当漂亮，它通过一组设计严苛的测试案例，从正确性、容错能力到性能，对系统进行了全方位的验证。</p>
+<p><strong>1. 功能性测试</strong></p>
+<ul>
+<li><strong>wc.go</strong>：标准词频统计。验证框架在无故障情况下处理经典MapReduce场景的能力</li>
+<li><strong>indexer.go</strong>：倒排索引构建。验证框架处理不同业务逻辑的正确性，测试中间结果的组织方式</li>
+</ul>
+<p><strong>2. 容错性测试</strong></p>
+<ul>
+<li><strong>crash.go</strong>：随机崩溃测试。<ul>
+<li>其Map/Reduce函数有约1/3概率直接退出进程，1/3概率延迟执行，1/3概率正常执行</li>
+<li><strong>设计思想</strong>：模拟真实的 worker 节点故障。它迫使协调器必须能够检测到 worker 失联（通过任务超时），并将任务重新调度给健康的 worker。通过此测试，证明您的协调器实现了有效的故障恢复机制</li>
+</ul>
+</li>
+<li><strong>early_exit.go</strong>：Worker 提前退出测试<ul>
+<li>某些 Reduce 任务会长时间睡眠，模拟 worker 僵死或网络分区</li>
+<li><strong>设计思想</strong>：测试协调器对”僵尸”任务的处理能力。即使 worker 进程没有崩溃但停止了进度，协调器也应能通过超时机制收回任务并重新分配</li>
+</ul>
+</li>
+</ul>
+<p><strong>3. 正确性与可靠性测试</strong></p>
+<ul>
+<li><strong>jobcount.go</strong>：任务分配计数测试<ul>
+<li><strong>设计思想</strong>：统计任务被执行的次数。即使在无故障情况下，也要确保协调器不会因编程错误（如重复通知完成）而导致同一个任务被多次成功提交。此测试用于验证您实现的任务状态机的严谨性</li>
+</ul>
+</li>
+<li><strong>nocrash.go</strong>：无崩溃对照测试<ul>
+<li>保留 crash.go 的结构但禁用崩溃功能，作为对照实验，用于排除因崩溃注入本身带来的干扰，确保系统在正常情况下的结果是正确的</li>
+</ul>
+</li>
+</ul>
+<p><strong>4. 并行性能测试</strong></p>
+<ul>
+<li><strong>mtiming.go &amp; rtiming.go</strong>：Map/Reduce 阶段并行度测试<ul>
+<li><strong>设计思想</strong>：验证 worker 是否能真正并行地执行 Map 和 Reduce 任务，这是 MapReduce 提升性能的关键</li>
+<li><strong>并行检测机制</strong>：这两个测试使用了巧妙的 nparallel() 函数来检测并行度<ul>
+<li>当任务开始时，worker 会在磁盘上创建一个以自身进程ID命名的临时文件（如 mr-worker-reduce-<pid>）</li>
+<li>随后，函数会扫描目录，统计由其他 worker 创建的同类临时文件的数量</li>
+<li>返回值就是当前正在并行执行该类型任务的 worker 数量</li>
+<li>通过检查 nparallel() 的返回值是否大于1，来验证并行性。如果您的协调器设计得当，能够同时向多个空闲 worker 分发任务，就能通过此测试</li>
+</ul>
+</li>
+<li><strong>补充细节</strong>：在 rtiming.go 的 Map 函数中，故意生成了 a 到 j 共10个不同的键，这是为了确保中间结果能被分区到多个 Reduce 任务中，从而为测试 Reduce 阶段的并行性创造前提条件。如果所有键都相同，则只会产生一个 Reduce 任务，无法测试并行</li>
+</ul>
+</li>
+</ul>
+<h4 id="设计与实现"><a href="#设计与实现" class="headerlink" title="设计与实现"></a>设计与实现</h4><p>这个实验作为入门项目，核心目的在于理解分布式任务调度与容错的基本思想。实现上主要包含两个组件：</p>
+<p><strong>协调器</strong></p>
+<ol>
+<li><p><strong>状态管理</strong>：维护所有Map与Reduce任务的完整状态信息，包括待分配、执行中、已完成三种核心状态。使用互斥锁对共享状态的任何读写操作进行同步，确保在高并发请求下的数据一致性，避免竞态条件</p>
+</li>
+<li><p><strong>任务调度</strong>：使用带缓冲的Channel（mapTaskChan与reduceTaskChan）构建待分配任务队列，实现生产者-消费者模型。当工人节点通过RPC请求任务时，协调器从对应的Channel中取出任务进行分配</p>
+</li>
+<li><p><strong>超时与重试</strong>：为每个已分配任务启动超时计时器（默认10秒），当检测到任务超时时，自动将任务状态重置为空闲，并重新加入分配队列，通过重试计数器实现任务重试上限控制（最多3次），防止无限重试</p>
+</li>
+<li><p><strong>阶段协调</strong>：遵循MapReduce执行模型，确保所有Map任务完成后才启动Reduce阶段，通过维护已完成Map任务计数器（CompletedMapTasks）与总任务数（NMap）的比对来实现阶段转换，保证Reduce阶段输入数据的完整性</p>
+</li>
+</ol>
+<p><strong>工人</strong></p>
+<ol>
+<li><p><strong>任务获取</strong>：启动后进入任务请求循环，定期向协调器请求任务（基础间隔100毫秒），如果未获取到任务则等待2秒再尝试</p>
+</li>
+<li><p><strong>任务执行</strong>：根据任务类型调用相应的Map或Reduce处理函数，Map任务产生的中间结果键值对，会依据键的哈希值被分区到不同的中间文件中，为后续的Reduce阶段做准备。输出文件遵循统一的命名规范：mr-[Map任务编号]-[Reduce任务编号]，以确保数据能被正确归并与查找</p>
+</li>
+<li><p><strong>状态同步</strong>：任务完成后通过RPC调用Coordinator.TaskCompleted方法通知协调器，告知任务已完成，确保任务状态及时更新</p>
+</li>
+</ol>
+<h3 id="KV-Server"><a href="#KV-Server" class="headerlink" title="KV Server"></a>KV Server</h3><p><strong>要求</strong>：构建一个单点服务的键值存储服务器，支持 Get、Put 和 Append 操作。这个实验的挑战在于处理各种网络故障。在有网络故障时，需要处理诸如：客户端请求超时后重发（可能导致操作被重复执行）、服务器处理成功后但响应丢失、以及因网络延迟导致的乱序请求等问题。核心是实现一套机制来保证操作的幂等性，例如为每个客户端请求分配唯一的序列号，确保即使收到重复请求，服务器的状态也是正确的</p>
+<h4 id="测试场景与设计思想"><a href="#测试场景与设计思想" class="headerlink" title="测试场景与设计思想"></a>测试场景与设计思想</h4><p><strong>基本功能测试场景</strong></p>
+<ul>
+<li><strong>TestBasic2 - 单客户端基本功能测试</strong><ul>
+<li><strong>测试场景</strong>：验证单个客户端操作 KV 服务的基本功能，测试 Get、Put、Append 操作的正确性，确保在单线程环境下系统能正常工作</li>
+<li><strong>设计思想</strong>：从最简单的场景开始，确保基础功能正确，为复杂测试提供可靠的基础验证</li>
+</ul>
+</li>
+</ul>
+<p><strong>并发功能测试场景</strong></p>
+<ul>
+<li><p><strong>TestBasic2 - 单客户端基础操作测试</strong></p>
+<ul>
+<li><strong>测试目标</strong>：验证 KV 服务在单线程环境下的基本操作正确性</li>
+<li><strong>测试场景</strong>：顺序执行 Put、Get、Append 操作，验证键值对的读写一致性，检查 Append 操作的字符串拼接功能</li>
+</ul>
+</li>
+<li><p><strong>TestConcurrent2 - 多客户端并发操作测试</strong></p>
+<ul>
+<li><strong>测试目标</strong>：验证服务端在并发访问下的数据一致性</li>
+<li><strong>测试场景</strong>：5个客户端并行执行读写操作，混合执行 Put、Get、Append 操作，验证最终数据状态的一致性</li>
+</ul>
+</li>
+<li><p><strong>TestUnreliable2 - 不可靠网络环境测试</strong></p>
+<ul>
+<li><strong>测试目标</strong>：验证系统在网络异常情况下的鲁棒性</li>
+<li><strong>测试场景</strong>：在模拟网络丢包、延迟的环境中运行多个客户端，测试客户端的自动重试机制，验证服务端在间歇性连接下的稳定性，关键技术：利用 labrpc 的网络模拟功能注入网络故障</li>
+</ul>
+</li>
+<li><p><strong>TestUnreliableOneKey2 - 单键并发容错测试</strong></p>
+<ul>
+<li><strong>测试目标</strong>：验证多客户端并发操作同一键值时的数据一致性</li>
+<li><strong>测试场景</strong>：多个客户端在不可靠网络中同时对同一键执行 Append 操作，验证操作的幂等性和最终一致性</li>
+</ul>
+</li>
+</ul>
+<p><strong>内存测试场景</strong></p>
+<ul>
+<li><p><strong>单操作内存测试</strong></p>
+<ul>
+<li>TestMemGet2：大值读取的内存开销验证</li>
+<li>TestMemPut2：键值更新的内存效率检验</li>
+<li>TestMemAppend2：连续追加操作的内存增长控制</li>
+</ul>
+</li>
+<li><p><strong>多客户端内存测试</strong></p>
+<ul>
+<li>TestMemPutManyClients：验证服务端处理大量客户端连接时的内存 scalability</li>
+<li>TestMemGetManyClients：只读操作在并发场景下的内存效率</li>
+<li>TestMemManyAppends：高频率追加操作的内存管理</li>
+</ul>
+</li>
+</ul>
+<h4 id="设计与实现-1"><a href="#设计与实现-1" class="headerlink" title="设计与实现"></a>设计与实现</h4><p>这个实验主要是为后续实现分布式键值服务做准备，难度不算大，重点在于单节点服务如何应对并发访问和不可靠网络带来的数据一致性问题——》线性一致性，对操作进行加锁，保证Append重复请求的幂等性。</p>
+<p>请求去重与幂等性：为每个客户端分配唯一ID，每次请求附带单调递增的序列号</p>
+<p>服务端为每个客户端维护“已处理的最大序列号”，收到请求时，服务端根据序列号判断：如果是已经处理过的请求，直接返回之前缓存的结果，实现幂等性。如果是新的请求，执行操作并更新状态。如果是过时的请求，直接拒绝，避免状态回退</p>
+<p>并发控制：由于需要维护客户端序列号状态和执行检查-更新操作，服务端必须在处理写请求时进行加锁，保证这些关键操作的原子性</p>
+<h3 id="Raft"><a href="#Raft" class="headerlink" title="Raft"></a>Raft</h3><p><strong>要求</strong>：基于raft论文，实现raft共识算法，包括领导者选举、日志复制、日志持久化、快照（简化版本），要通过在复杂网络以及并发下的不同测试。核心是实现一个能够在网络分区、节点故障等异常情况下仍能保持一致性的分布式共识协议。</p>
+<h4 id="测试情景与设计思想-1"><a href="#测试情景与设计思想-1" class="headerlink" title="测试情景与设计思想"></a>测试情景与设计思想</h4><p>课程通过一系列严格的测试案例验证Raft实现的正确性和鲁棒性。</p>
+<p><strong>1. 基础功能测试</strong></p>
+<ul>
+<li><p><strong>TestInitialElection3A</strong>：初始领导者选举测试</p>
+<ul>
+<li><strong>测试目标</strong>：验证集群启动后能够成功选举出领导者</li>
+<li><strong>设计思想</strong>：确保在正常网络环境下，Raft节点能够通过选举机制选出唯一的领导者，验证基本的选举逻辑和心跳机制</li>
+</ul>
+</li>
+<li><p><strong>TestReElection3A</strong>：重新选举测试</p>
+<ul>
+<li><strong>测试目标</strong>：验证领导者故障后集群能够重新选举</li>
+<li><strong>设计思想</strong>：模拟领导者节点崩溃，测试其他节点能否检测到领导者失联并触发新的选举，验证故障检测和恢复机制</li>
+</ul>
+</li>
+</ul>
+<p>TestManyElections3A</p>
+<p><strong>2. 日志复制与一致性测试</strong></p>
+<ul>
+<li><p><strong>TestBasicAgree3B</strong>：基本日志一致性测试</p>
+<ul>
+<li><strong>测试目标</strong>：验证领导者的日志条目能够正确复制到所有跟随者</li>
+<li><strong>设计思想</strong>：测试在无故障情况下，客户端提交的命令能够被正确复制到大多数节点，验证基本的日志复制机制</li>
+</ul>
+</li>
+<li><p><strong>TestFailAgree2B</strong>：故障情况下的日志一致性测试</p>
+<ul>
+<li><strong>测试目标</strong>：验证在节点故障情况下日志仍能保持一致性</li>
+<li><strong>设计思想</strong>：模拟部分节点故障，测试系统能否在多数节点存活的情况下继续提供服务并保持日志一致性</li>
+</ul>
+</li>
+<li><p><strong>TestFailNoAgree2B</strong>：无法达成共识测试</p>
+<ul>
+<li><strong>测试目标</strong>：验证当无法达成多数派时系统不会提交日志</li>
+<li><strong>设计思想</strong>：测试在网络分区导致无法形成多数派的情况下，系统不会提交任何日志条目，确保安全性</li>
+</ul>
+</li>
+</ul>
+<p><strong>3. 持久化测试</strong></p>
+<ul>
+<li><p><strong>TestPersist12C</strong>：基本持久化测试</p>
+<ul>
+<li><strong>测试目标</strong>：验证节点重启后能够恢复状态</li>
+<li><strong>设计思想</strong>：模拟节点崩溃重启，测试其能否从持久化存储中恢复之前的任期和日志状态</li>
+</ul>
+</li>
+<li><p><strong>TestPersist22C</strong>：并发持久化测试</p>
+<ul>
+<li><strong>测试目标</strong>：验证在并发操作下的持久化正确性</li>
+<li><strong>设计思想</strong>：在多个节点并发提交日志的情况下测试持久化机制，确保重启后所有节点状态一致</li>
+</ul>
+</li>
+</ul>
+<p><strong>4. 快照测试</strong></p>
+<ul>
+<li><p><strong>TestSnapshotBasic2D</strong>：基本快照功能测试</p>
+<ul>
+<li><strong>测试目标</strong>：验证快照机制能够正确压缩日志</li>
+<li><strong>设计思想</strong>：测试当日志增长到一定大小时，系统能够创建快照并截断旧日志，同时保持状态一致性</li>
+</ul>
+</li>
+<li><p><strong>TestSnapshotInstall2D</strong>：快照安装测试</p>
+<ul>
+<li><strong>测试目标</strong>：验证落后节点能够通过快照快速同步</li>
+<li><strong>设计思想</strong>：模拟节点长时间离线后重新加入，测试其能否通过安装快照快速追上最新状态</li>
+</ul>
+</li>
+</ul>
+<p><strong>5. 复杂网络环境测试</strong></p>
+<ul>
+<li><p><strong>TestFigure82C</strong>：基于论文图8的场景测试</p>
+<ul>
+<li><strong>测试目标</strong>：验证在复杂网络时序下的正确性</li>
+<li><strong>设计思想</strong>：重现Raft论文中图8描述的复杂场景，测试系统在各种网络延迟和消息乱序情况下的行为</li>
+</ul>
+</li>
+<li><p><strong>TestUnreliableAgree2C</strong>：不可靠网络下的共识测试</p>
+<ul>
+<li><strong>测试目标</strong>：验证在网络不可靠情况下仍能达成共识</li>
+<li><strong>设计思想</strong>：在模拟网络丢包、重复、乱序的环境中测试Raft协议，验证其容错能力</li>
+</ul>
+</li>
+</ul>
+<h4 id="设计与实现-2"><a href="#设计与实现-2" class="headerlink" title="设计与实现"></a>设计与实现</h4><p>Raft实验是课程中最具挑战性的部分，需要深入理解分布式共识的核心原理。</p>
+<p><strong>核心组件</strong></p>
+<ol>
+<li><strong>状态机</strong>：每个节点维护当前状态（领导者、跟随者、候选人）</li>
+<li><strong>日志管理</strong>：维护操作日志序列，确保所有节点最终一致</li>
+<li><strong>选举机制</strong>：实现超时驱动的领导者选举算法</li>
+<li><strong>心跳机制</strong>：领导者定期发送心跳维持权威</li>
+<li><strong>日志复制</strong>：领导者将日志条目复制到跟随者</li>
+<li><strong>持久化存储</strong>：将关键状态（当前任期、投票记录、日志）持久化</li>
+<li><strong>快照压缩</strong>：定期创建状态快照以节省存储空间</li>
+</ol>
+<p><strong>关键算法</strong></p>
+<ul>
+<li><strong>领导者选举</strong>：基于随机超时和多数派投票</li>
+<li><strong>日志复制</strong>：使用PrevLogIndex和PrevLogTerm确保日志一致性</li>
+<li><strong>安全性保证</strong>：通过选举限制和提交规则防止脑裂和数据丢失</li>
+</ul>
+<h3 id="Fault-tolerant-Key-Value-Service"><a href="#Fault-tolerant-Key-Value-Service" class="headerlink" title="Fault-tolerant Key/Value Service"></a>Fault-tolerant Key/Value Service</h3><p><strong>要求</strong>：在raft协议的基础上，实现一个kv服务，实现无快照和有快照两种机制</p>
+<h3 id="Sharded-Key-Value-Service"><a href="#Sharded-Key-Value-Service" class="headerlink" title="Sharded Key/Value Service"></a>Sharded Key/Value Service</h3><p><strong>要求</strong>：在raft的基础上实现一个静态分片、动态分片的KV服务</p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></div>  <hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2025-06-16  <a class="commentCountImg" href="/2025/06/16/Cursor%E4%BD%BF%E7%94%A8%20%E4%BD%93%E9%AA%8C/#comment-container"><span class="display-none-class">/2025/06/16/Cursor使用 体验/</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="1f0ffb2831b6b4e449821495ce708dc1">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>21 分钟  <i class="fas fa-pencil-alt"> </i>3.2 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/06/16/Cursor%E4%BD%BF%E7%94%A8%20%E4%BD%93%E9%AA%8C/">聊一聊Cursor，AI IDE 如何提升开发效率与体验</a></h1><div class="content"><p>在人工智能不断演进的今天，各类 AI 编程工具正逐渐改变我们编码的方式。作为一名计算机行业的从业者，我在 2025 年上半年深入使用了 Cursor 这一编程工具，从一开始的试探性接触，到后来将它纳入日常开发流程，用它完成了包括微信小程序和 Java CURD 系统在内的多个实际项目。</p></div><div class="index-category-tag">  <hr></div><div class="level is-mobile is-flex"><div class="level-start"><div class="level-item"><a class="article-more button is-small size-small" href="/2025/06/16/Cursor%E4%BD%BF%E7%94%A8%20%E4%BD%93%E9%AA%8C/#more">阅读更多&gt;&gt;</a></div></div></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2024-06-10  <a class="commentCountImg" href="/2024/06/10/%E7%AB%AF%E5%8D%88%EF%BC%8C%E5%B9%B4%E4%B8%AD%E6%80%BB%E7%BB%93/#comment-container"><span class="display-none-class">/2024/06/10/端午，年中总结/</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="b49a3d49ce33ff0742c0a4eb4deb49a7">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>10 分钟  <i class="fas fa-pencil-alt"> </i>1.5 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/06/10/%E7%AB%AF%E5%8D%88%EF%BC%8C%E5%B9%B4%E4%B8%AD%E6%80%BB%E7%BB%93/">端午，年中总结</a></h1><div class="content"><p>暑气渐浓，转眼已是年中。翻出年初时写下的目标，对照这半年的经历，是时候做一番回顾了。</p></div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></div>  <hr></div><div class="level is-mobile is-flex"><div class="level-start"><div class="level-item"><a class="article-more button is-small size-small" href="/2024/06/10/%E7%AB%AF%E5%8D%88%EF%BC%8C%E5%B9%B4%E4%B8%AD%E6%80%BB%E7%BB%93/#more">阅读更多&gt;&gt;</a></div></div></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2024-06-06  <a class="commentCountImg" href="/2024/06/06/Https%E8%A7%A3%E6%9E%90/#comment-container"><span class="display-none-class">/2024/06/06/Https解析/</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="b772d8a4854cfaff6ac6ebeeb5393d28">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>22 分钟  <i class="fas fa-pencil-alt"> </i>3.3 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/06/06/Https%E8%A7%A3%E6%9E%90/">为什么我们需要HTTPS</a></h1><div class="content"><p>在互联网发展初期，HTTP 协议凭借其简单和无状态的设计得以迅速普及。然而，这种采用“明文”传输的方式，也意味着协议本身不具备机密性、完整性和端点身份验证的能力：所有请求和响应在网络中都以未加密的形式传输，因此任何能够监视或介入通信链路的实体——例如同一局域网内的攻击者、中间代理、互联网服务提供商（ISP），甚至是能够操控路由或交换设备的第三方——都可能截取通信流量、读取敏感信息，或在特定条件下发动中间人攻击，篡改数据或插入恶意内容。</p></div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">网络安全</a><span> </span><a class="article-more button is-small link-muted index-categories" href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/Web%E5%BC%80%E5%8F%91/">Web开发</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/HTTPS/">HTTPS</a><span> </span><a class="article-more button is-small link-muted index-tags" href="/tags/SSL-TLS/">SSL/TLS</a><span> </span><a class="article-more button is-small link-muted index-tags" href="/tags/%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6/">数字证书</a><span> </span><a class="article-more button is-small link-muted index-tags" href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">网络安全</a><span> </span><a class="article-more button is-small link-muted index-tags" href="/tags/Web%E5%AE%89%E5%85%A8/">Web安全</a></div><hr></div><div class="level is-mobile is-flex"><div class="level-start"><div class="level-item"><a class="article-more button is-small size-small" href="/2024/06/06/Https%E8%A7%A3%E6%9E%90/#more">阅读更多&gt;&gt;</a></div></div></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2024-05-30  <a class="commentCountImg" href="/2024/05/30/%E5%8C%BA%E5%9D%97%E9%93%BE%E8%AE%B2%E8%A7%A3/#comment-container"><span class="display-none-class">/2024/05/30/区块链讲解/</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="d242ac62a1c03c34e6d98db91a1c4a06">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>19 分钟  <i class="fas fa-pencil-alt"> </i>2.9 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/05/30/%E5%8C%BA%E5%9D%97%E9%93%BE%E8%AE%B2%E8%A7%A3/">扒一扒比特币</a></h1><div class="content"><p>2008年，一个化名中本聪的人在一篇白皮书里，提出了一个看似简单却极具野心的构想：创建一种点对点的电子货币，让两个人可以不必依赖银行或其他金融中介，直接完成支付。十多年过去，比特币从一行行代码、一纸构想，渐渐长成了一个真实运转的全球性网络。它既带着对传统金融信任模式的深刻质疑，也让我们看到，技术的理想与现实世界的制度之间，始终存在着拉扯与张力。</p></div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%91%E6%99%AE/">技术科普</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/">区块链</a><span> </span><a class="article-more button is-small link-muted index-tags" href="/tags/%E6%AF%94%E7%89%B9%E5%B8%81/">比特币</a><span> </span><a class="article-more button is-small link-muted index-tags" href="/tags/%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96/">去中心化</a><span> </span><a class="article-more button is-small link-muted index-tags" href="/tags/%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81/">加密货币</a></div><hr></div><div class="level is-mobile is-flex"><div class="level-start"><div class="level-item"><a class="article-more button is-small size-small" href="/2024/05/30/%E5%8C%BA%E5%9D%97%E9%93%BE%E8%AE%B2%E8%A7%A3/#more">阅读更多&gt;&gt;</a></div></div></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2023-08-19  <a class="commentCountImg" href="/2023/08/19/%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E8%A1%8Cdjango%E7%AB%99%E7%82%B9/#comment-container"><span class="display-none-class">/2023/08/19/新服务器运行django站点/</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="671ddabf096e7b17d4e0169b8dfe4fd3">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>10 分钟  <i class="fas fa-pencil-alt"> </i>1.5 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/08/19/%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E8%A1%8Cdjango%E7%AB%99%E7%82%B9/">新服务器运行django站点</a></h1><div class="content"><p>远程登录服务器</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo ssh root@user_name</span><br><span class="line">#删除 原来的ssh密钥命令</span><br><span class="line">ssh-keygen -f &quot;/home/shimmer/.ssh/known_hosts&quot; -R &quot;117.72.9.46&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div><div class="index-category-tag">  <hr></div><div class="level is-mobile is-flex"><div class="level-start"><div class="level-item"><a class="article-more button is-small size-small" href="/2023/08/19/%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E8%A1%8Cdjango%E7%AB%99%E7%82%B9/#more">阅读更多&gt;&gt;</a></div></div></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2023-06-12  <a class="commentCountImg" href="/2023/06/12/CORS%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/#comment-container"><span class="display-none-class">/2023/06/12/CORS跨域问题详解/</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="3f8a2e684b5c404f2eb7c48b8b6d9adf">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>16 分钟  <i class="fas fa-pencil-alt"> </i>2.4 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/06/12/CORS%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/">聊一聊CORS跨域</a></h1><div class="content"><p>在初次接触前后端分离开发中，我们会遇到一个令人不解的问题——跨域（CORS，Cross-Origin Resource Sharing）。明明接口地址、请求方法都没问题，却无法访问后端服务。</p>
+<h2 id="什么是跨域"><a href="#什么是跨域" class="headerlink" title="什么是跨域"></a>什么是跨域</h2><p>跨域（Cross-Origin）指的是在Web浏览器中，当一个网页的脚本（如JavaScript）尝试向与其协议、域名或端口三者中任意一个不同的目标地址发起请求时，就会产生跨域请求。需要注意的是：</p>
+<ul>
+<li>同源策略是浏览器主动实施的一套核心安全机制，服务器之间的通信不受此限制。</li>
+<li>该策略主要限制的是通过脚本（如 XMLHttpRequest 或 Fetch API）发起的跨域请求，而浏览器允许跨域嵌入资源，如图片、CSS、JavaScript脚本（但限制了脚本读取跨域资源的内容）。</li>
+</ul>
+<h2 id="为什么会有同源策略"><a href="#为什么会有同源策略" class="headerlink" title="为什么会有同源策略"></a>为什么会有同源策略</h2><p>浏览器为了防止恶意网页利用用户的浏览器身份获取其他网站的敏感数据，为了防止恶意网页利用浏览器发出请求时自动携带cookie的特点进行攻击，实施了<strong>同源策略</strong>。主要防护以下几类威胁：</p>
+<ul>
+<li><strong>CSRF（跨站请求伪造）</strong>：恶意网站通过浏览器自动携带的 Cookie，以用户身份向已登录网站发起未经授权的请求。</li>
+<li><strong>数据泄露</strong>：恶意网页尝试读取用户在其他网站的敏感信息，如 Cookie、LocalStorage、SessionStorage 等。</li>
+<li><strong>内网扫描</strong>：当用户在公司内网访问外部恶意网站时，该网站可能尝试扫描和攻击内网资源。</li>
+</ul>
+<h2 id="浏览器如何处理跨域请求"><a href="#浏览器如何处理跨域请求" class="headerlink" title="浏览器如何处理跨域请求"></a>浏览器如何处理跨域请求</h2><p>当浏览器检测到当前页面发起的请求与页面源不同，会根据请求类型采取不同的处理方式。</p>
+<h3 id="CORS请求分类：简单请求与预检请求"><a href="#CORS请求分类：简单请求与预检请求" class="headerlink" title="CORS请求分类：简单请求与预检请求"></a>CORS请求分类：简单请求与预检请求</h3><h4 id="简单请求的定义"><a href="#简单请求的定义" class="headerlink" title="简单请求的定义"></a>简单请求的定义</h4><p>满足以下<strong>全部条件</strong>的请求被视为“简单请求”：</p>
+<ol>
+<li><strong>方法</strong>：仅限 <code>GET</code>、<code>POST</code>、<code>HEAD</code>。</li>
+<li><strong>Content-Type</strong>：仅限 <code>application/x-www-form-urlencoded</code>、<code>multipart/form-data</code>、<code>text/plain</code>。</li>
+<li><strong>请求头</strong>：仅限 <code>Accept</code>、<code>Accept-Language</code>、<code>Content-Language</code>、<code>Content-Type</code>（前述三种值），不允许自定义头。</li>
+</ol>
+<p><strong>简单请求的处理流程</strong></p>
+<ol>
+<li>浏览器直接发送请求，同时添加 <code>Origin</code> 头部</li>
+<li>服务器处理请求并返回响应</li>
+<li>浏览器检查响应中的 <code>Access-Control-Allow-Origin</code> 头部</li>
+<li>如果允许当前源访问，则将响应交给JavaScript；否则抛出CORS错误</li>
+</ol>
+<h4 id="预检请求（Preflight-Request）"><a href="#预检请求（Preflight-Request）" class="headerlink" title="预检请求（Preflight Request）"></a>预检请求（Preflight Request）</h4><p>当请求不满足“简单请求”条件时，浏览器会先发送一个 <code>OPTIONS</code> 预检请求，确认服务器是否允许实际请求。</p>
+<p><strong>触发预检请求的情况</strong></p>
+<ul>
+<li>使用非简单请求方法（如 <code>PUT</code>、<code>DELETE</code>、<code>PATCH</code>）</li>
+<li>使用自定义请求头（如 <code>Authorization</code>、<code>X-API-Key</code>）</li>
+<li><code>Content-Type</code> 为 <code>application/json</code> 等非简单类型。</li>
+</ul>
+<p><strong>预检请求示例</strong></p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">OPTIONS</span> <span class="string">/api/data</span> <span class="meta">HTTP/1.1</span></span><br><span class="line"><span class="attribute">Host</span><span class="punctuation">: </span>api.example.com</span><br><span class="line"><span class="attribute">Origin</span><span class="punctuation">: </span>https://www.client.com</span><br><span class="line"><span class="attribute">Access-Control-Request-Method</span><span class="punctuation">: </span>DELETE</span><br><span class="line"><span class="attribute">Access-Control-Request-Headers</span><span class="punctuation">: </span>Authorization, X-Custom-Header</span><br></pre></td></tr></table></figure>
+
+<p><strong>预检响应示例</strong></p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">HTTP/1.1</span> <span class="number">200</span> OK</span><br><span class="line"><span class="attribute">Access-Control-Allow-Origin</span><span class="punctuation">: </span>https://www.client.com</span><br><span class="line"><span class="attribute">Access-Control-Allow-Methods</span><span class="punctuation">: </span>GET, POST, PUT, DELETE</span><br><span class="line"><span class="attribute">Access-Control-Allow-Headers</span><span class="punctuation">: </span>Authorization, X-Custom-Header</span><br><span class="line"><span class="attribute">Access-Control-Max-Age</span><span class="punctuation">: </span>86400</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>Tip</strong>：<code>Access-Control-Max-Age</code> 表示预检结果的缓存时间（单位：秒），可减少预检次数。</p>
+</blockquote>
+<h4 id="携带凭据的请求"><a href="#携带凭据的请求" class="headerlink" title="携带凭据的请求"></a>携带凭据的请求</h4><p>当请求需要携带cookie或其他凭据时：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">fetch</span>(url, &#123; </span><br><span class="line">    <span class="attr">credentials</span>: <span class="string">&#x27;include&#x27;</span> </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>浏览器会进行额外检查：</p>
+<ol>
+<li>服务器必须返回 <code>Access-Control-Allow-Credentials: true</code></li>
+<li><code>Access-Control-Allow-Origin</code> 不能是通配符 <code>*</code>，必须是具体的源</li>
+<li>如果检查不通过，浏览器会阻止JavaScript访问响应数据，并抛出CORS错误</li>
+</ol>
+<h2 id="常见跨域场景举例"><a href="#常见跨域场景举例" class="headerlink" title="常见跨域场景举例"></a>常见跨域场景举例</h2><table>
+<thead>
+<tr>
+<th>场景</th>
+<th>示例</th>
+<th>跨域原因</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>子域名不同</td>
+<td>页面：<code>https://www.example.com</code>接口：<code>https://api.example.com</code></td>
+<td>域名不同</td>
+</tr>
+<tr>
+<td>端口不同（开发环境）</td>
+<td>页面：<code>http://localhost:3000</code>接口：<code>http://localhost:8080</code></td>
+<td>端口不同</td>
+</tr>
+<tr>
+<td>协议和域名都不同</td>
+<td>页面：<code>http://insecure.com</code>接口：<code>https://secure.com</code></td>
+<td>协议、域名都不同</td>
+</tr>
+<tr>
+<td>第三方 API 调用</td>
+<td>页面：<code>https://my-app.com</code>接口：<code>https://api.weather.com</code></td>
+<td>域名不同</td>
+</tr>
+<tr>
+<td>本地文件访问</td>
+<td>页面：<code>file:///C:/app/index.html</code>接口：<code>http://localhost:8080</code></td>
+<td>协议（file:// vs http://）</td>
+</tr>
+</tbody></table>
+<h2 id="🔄-跨域解决方案对比"><a href="#🔄-跨域解决方案对比" class="headerlink" title="🔄 跨域解决方案对比"></a>🔄 跨域解决方案对比</h2><table>
+<thead>
+<tr>
+<th>方案</th>
+<th>原理与适用场景</th>
+<th>限制与注意事项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>1. JSONP</strong></td>
+<td>利用 <code>&lt;script&gt;</code> 标签能够跨域加载脚本的特性，将接口返回的数据包装成函数调用。</td>
+<td>仅支持 <code>GET</code> 请求，且无法处理复杂交互；已被现代 CORS 替代。</td>
+</tr>
+<tr>
+<td><strong>2. 反向代理</strong></td>
+<td>前端服务器（如 Nginx）接收前端请求，再转发到后端，浏览器只与同源服务器通信。</td>
+<td>配置简单、安全性高，适用于生产环境；需维护代理服务器。</td>
+</tr>
+<tr>
+<td><strong>3. iframe + postMessage</strong></td>
+<td>在不同源页面间通过 <code>postMessage</code> 进行数据通信。</td>
+<td>实现较繁琐，主要用于嵌入第三方或多个域之间的复杂通信场景。</td>
+</tr>
+<tr>
+<td><strong>4. 后端设置 CORS</strong></td>
+<td>后端在响应头中配置 <code>Access-Control-Allow-Origin</code>、<code>Access-Control-Allow-Methods</code>、<code>Access-Control-Allow-Headers</code> 等。</td>
+<td>通用、标准；可细粒度控制源、方法与头部；需后端框架或中间件支持。</td>
+</tr>
+<tr>
+<td><strong>5. WebSocket</strong></td>
+<td>基于 TCP 的双向通信协议，一旦建立连接后不受同源策略限制。</td>
+<td>需要 WebSocket 服务端支持；不适合所有应用场景。</td>
+</tr>
+</tbody></table>
+<h2 id="CORS与CSRF的安全关系澄清"><a href="#CORS与CSRF的安全关系澄清" class="headerlink" title="CORS与CSRF的安全关系澄清"></a>CORS与CSRF的安全关系澄清</h2><blockquote>
+<p>“当后端没有设置CORS的时候，数据岂不是轻易的就被窃取了”</p>
+</blockquote>
+<p>实际上，<strong>CORS 不是安全机制，而是浏览器的访问控制</strong>：</p>
+<ol>
+<li><strong>跨域请求</strong>：浏览器仍会发送请求到服务器（可抓包验证）。</li>
+<li><strong>响应处理</strong>：若未授权，浏览器会阻止前端脚本读取响应，但请求已执行。</li>
+<li><strong>真正规避风险</strong>：应对 CSRF 攻击，需使用 CSRF Token、SameSite Cookie 等机制。</li>
+</ol>
+<h3 id="CSRF攻击三要素"><a href="#CSRF攻击三要素" class="headerlink" title="CSRF攻击三要素"></a>CSRF攻击三要素</h3><ol>
+<li>用户已登录目标网站（存在有效会话）</li>
+<li>网站依赖Cookie验证身份（无额外防护）</li>
+<li>用户访问恶意页面（触发跨域请求）</li>
+</ol>
+<h3 id="CSRF-防御策略"><a href="#CSRF-防御策略" class="headerlink" title="CSRF 防御策略"></a>CSRF 防御策略</h3><h4 id="1-CSRF-Token"><a href="#1-CSRF-Token" class="headerlink" title="1. CSRF Token"></a>1. CSRF Token</h4><p><strong>原理</strong>：后端在用户会话中生成一个随机、不可预测的 token，并将其以隐藏字段或响应接口返回给前端；前端将此 token 附加在每次敏感请求中，后端校验请求中 token 与会话存储的值是否一致。若一致，则请求合法。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Django. views.py</span></span><br><span class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> JsonResponse</span><br><span class="line"><span class="keyword">from</span> django.middleware.csrf <span class="keyword">import</span> get_token</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">csrf_token_view</span>(<span class="params">request</span>):</span><br><span class="line">    <span class="keyword">return</span> JsonResponse(&#123;<span class="string">&#x27;csrfToken&#x27;</span>: get_token(request)&#125;)</span><br><span class="line"></span><br><span class="line">&lt;!-- 模板或前端框架获取并使用 --&gt;</span><br><span class="line">&lt;<span class="built_in">input</span> <span class="built_in">type</span>=<span class="string">&quot;hidden&quot;</span> <span class="built_in">id</span>=<span class="string">&quot;csrfToken&quot;</span> value=<span class="string">&quot;&quot;</span> /&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">fetch(<span class="string">&#x27;/csrf-token&#x27;</span>).then(res =&gt; res.json()).then(data =&gt; &#123;</span><br><span class="line">  document.getElementById(<span class="string">&#x27;csrfToken&#x27;</span>).value = data.csrfToken;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">function postData(url, payload) &#123;</span><br><span class="line">  <span class="keyword">return</span> fetch(url, &#123;</span><br><span class="line">    method: <span class="string">&#x27;POST&#x27;</span>,</span><br><span class="line">    credentials: <span class="string">&#x27;include&#x27;</span>,</span><br><span class="line">    headers: &#123;</span><br><span class="line">      <span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/json&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;X-CSRF-Token&#x27;</span>: document.getElementById(<span class="string">&#x27;csrfToken&#x27;</span>).value</span><br><span class="line">    &#125;,</span><br><span class="line">    body: JSON.stringify(payload)</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-SameSite-Cookie-属性"><a href="#2-SameSite-Cookie-属性" class="headerlink" title="2. SameSite Cookie 属性"></a>2. SameSite Cookie 属性</h4><p><strong>原理</strong>：通过设置 <code>SameSite</code> 属性控制浏览器是否在跨站请求时携带 Cookie。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-Cookie: sessionid=abcd1234; SameSite=Lax; Secure; HttpOnly; Path=/</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>行为说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Strict</td>
+<td>仅当前站点导航时携带 Cookie，完全阻止跨站请求发送 Cookie。</td>
+</tr>
+<tr>
+<td>Lax</td>
+<td>允许顶级跨站 GET/HEAD 导航携带 Cookie（推荐用于登录态）。</td>
+</tr>
+<tr>
+<td>None</td>
+<td>始终携带 Cookie，适用于复杂跨站场景，需配合 <code>Secure</code>。</td>
+</tr>
+</tbody></table>
+<p><strong>优缺点</strong>：</p>
+<ul>
+<li><strong>优点</strong>：无需额外前端代码，依赖浏览器实现；</li>
+<li><strong>缺点</strong>：对非导航型跨站请求（如 AJAX POST）无效；部分老旧浏览器兼容性欠佳。</li>
+</ul>
+<h4 id="3-验证-Origin-Referer-头"><a href="#3-验证-Origin-Referer-头" class="headerlink" title="3. 验证 Origin / Referer 头"></a>3. 验证 <code>Origin</code> / <code>Referer</code> 头</h4><p><strong>原理</strong>：后端检查请求头中的 <code>Origin</code> 或 <code>Referer</code> 字段，仅允许来自可信域名的请求。此方式不依赖 token，但要确保所有请求都出现在同浏览器策略下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># Django </span><br><span class="line"></span><br><span class="line"># middleware.py</span><br><span class="line">from django.http import HttpResponseForbidden</span><br><span class="line"></span><br><span class="line">class OriginCheckMiddleware:</span><br><span class="line">    def __init__(self, get_response):</span><br><span class="line">        self.get_response = get_response</span><br><span class="line"></span><br><span class="line">    def __call__(self, request):</span><br><span class="line">        origin = request.headers.get(&#x27;Origin&#x27;) or request.headers.get(&#x27;Referer&#x27;)</span><br><span class="line">        if origin and not origin.startswith(&#x27;https://mydomain.com&#x27;):</span><br><span class="line">            return HttpResponseForbidden(&#x27;Forbidden: Invalid Origin&#x27;)</span><br><span class="line">        return self.get_response(request)</span><br></pre></td></tr></table></figure>
+
+
+<p>然后在 settings.py 中添加中间件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">MIDDLEWARE = [</span><br><span class="line">    ...</span><br><span class="line">    &#x27;yourproject.middleware.OriginCheckMiddleware&#x27;,</span><br><span class="line">    ...</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>：某些请求（如表单提交）可能没有 <code>Origin</code>，建议同时检查 <code>Referer</code>。</p>
+<h4 id="4-🔐-双重提交验证（Double-Submit-Cookie）"><a href="#4-🔐-双重提交验证（Double-Submit-Cookie）" class="headerlink" title="4. 🔐 双重提交验证（Double Submit Cookie）"></a>4. 🔐 双重提交验证（Double Submit Cookie）</h4><p><strong>原理</strong>：前端和后端各自持有相同的随机 token。后端将 token 写入 Cookie，前端也读取该 Cookie 并在请求头中携带；后端只需比较 Cookie 与头部中 token 是否一致，无需维护服务端会话状态。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 前端示例</span><br><span class="line">const token = Cookies.get(&#x27;XSRF-TOKEN&#x27;);</span><br><span class="line">fetch(&#x27;/api&#x27;, &#123;</span><br><span class="line">  method: &#x27;POST&#x27;,</span><br><span class="line">  headers: &#123; &#x27;X-XSRF-TOKEN&#x27;: token &#125;,</span><br><span class="line">  credentials: &#x27;include&#x27;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"># 后端示例（伪代码）</span><br><span class="line">if (request.cookies[&#x27;XSRF-TOKEN&#x27;] !== request.headers[&#x27;X-XSRF-TOKEN&#x27;]) &#123;</span><br><span class="line">  reject();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>优缺点</strong>：</p>
+<ul>
+<li><strong>优点</strong>：适合无状态架构，无需会话存储；</li>
+<li><strong>缺点</strong>：Token 泄露风险更高，需与 HTTPS 强绑定。</li>
+</ul>
+<h4 id="5-CAPTCHA-二次确认"><a href="#5-CAPTCHA-二次确认" class="headerlink" title="5. CAPTCHA / 二次确认"></a>5. CAPTCHA / 二次确认</h4><p>对高风险操作（如交易、密码修改等），可在操作前要求用户输入 CAPTCHA、短信验证码或重新输入密码，以二次确认用户意图。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 示例：操作前弹出验证框 --&gt;</span><br><span class="line">&lt;label&gt;请输入验证码：&lt;input id=&quot;captcha&quot; /&gt;&lt;/label&gt;</span><br><span class="line">&lt;button onclick=&quot;submitWithCaptcha()&quot;&gt;确认操作&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+
+</div><div class="index-category-tag">  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/CORS/">CORS</a><span> </span><a class="article-more button is-small link-muted index-tags" href="/tags/%E8%B7%A8%E5%9F%9F/">跨域</a><span> </span><a class="article-more button is-small link-muted index-tags" href="/tags/%E5%AE%89%E5%85%A8/">安全</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2022-09-06  <a class="commentCountImg" href="/2022/09/06/%E9%80%9A%E4%BF%97%E8%A7%A3%E9%87%8Anginx/#comment-container"><span class="display-none-class">/2022/09/06/通俗解释nginx/</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="f100c2f86d0467aabeea7ddb5460c49c">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>10 分钟  <i class="fas fa-pencil-alt"> </i>1.5 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/09/06/%E9%80%9A%E4%BF%97%E8%A7%A3%E9%87%8Anginx/">小白的nginx指南</a></h1><div class="content"><p><strong>Nginx</strong> 是一个高性能的开源web和反向代理服务器，也可以用作电子邮件（IMAP/POP3）代理服务器。它的主要特点包括占用资源少、并发性高、可扩展性强以及对高负载环境的稳定性。</p></div><div class="index-category-tag">  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/Nginx/">Nginx</a></div><hr></div><div class="level is-mobile is-flex"><div class="level-start"><div class="level-item"><a class="article-more button is-small size-small" href="/2022/09/06/%E9%80%9A%E4%BF%97%E8%A7%A3%E9%87%8Anginx/#more">阅读更多&gt;&gt;</a></div></div></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2022-04-08  <a class="commentCountImg" href="/2022/04/08/%E5%85%B3%E9%94%AE%E8%AF%8D%E6%8F%90%E5%8F%96%E7%AE%97%E6%B3%95/#comment-container"><span class="display-none-class">/2022/04/08/关键词提取算法/</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="f0459e21854d249587676dbb4af6d7ba">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>15 分钟  <i class="fas fa-pencil-alt"> </i>2.3 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/04/08/%E5%85%B3%E9%94%AE%E8%AF%8D%E6%8F%90%E5%8F%96%E7%AE%97%E6%B3%95/">关键词提取算法</a></h1><div class="content"><p>关键词是揭示文档核心主题的最小语义单元，对于理解文本内容至关重要。关键词自动抽取技术致力于自动识别和提取这些具有高度意义和代表性的词汇或短语，实现了自动化的关键词识别过程。在文本挖掘领域，这一技术被称为关键词抽取（Keyword Extraction），而在信息检索领域，它通常被称作自动标引（Automatic Indexing）。关键词提取作为文献检索、自动摘要、文本分类、推荐系统等多个领域的关键任务，为这些应用提供了基础性的支持。</p></div><div class="index-category-tag">  <hr></div><div class="level is-mobile is-flex"><div class="level-start"><div class="level-item"><a class="article-more button is-small size-small" href="/2022/04/08/%E5%85%B3%E9%94%AE%E8%AF%8D%E6%8F%90%E5%8F%96%E7%AE%97%E6%B3%95/#more">阅读更多&gt;&gt;</a></div></div></div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous is-invisible is-hidden-mobile"><a href="/page/0/">上一页</a></div><div class="pagination-next"><a href="/page/2/">下一页</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link is-current" href="/">1</a></li><li><a class="pagination-link" href="/page/2/">2</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/6/">6</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><!--!--><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/img/avatar.png" alt="Shimmer"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Shimmer</p><p class="is-size-6 is-block">做正确的事</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>芬兰</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">55</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">13</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">42</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="/" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/shimmer66"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="/2279696120@qq.com"><i class="fa fa-envelope"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
                                 $.getJSON("https://v1.hitokoto.cn/", function (data) {
                                 if(data){
                                     $('#hitokoto').html("");
                                     $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
                                     "<p>"+"来源《"+data.from+"》</p><p>提供者-"+data.creator+"</p>");
                                 }});}
-                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><!--!--><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2025-07-30T04:26:18.000Z">2025-07-30</time></p><p class="title"><a href="/2025/07/30/%E4%BB%A3%E7%90%86%E8%BD%AF%E4%BB%B6/">代理软件</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2025-06-16T05:22:01.000Z">2025-06-16</time></p><p class="title"><a href="/2025/06/16/Cursor%E4%BD%BF%E7%94%A8%20%E4%BD%93%E9%AA%8C/">聊一聊Cursor，AI IDE 如何提升开发效率与体验</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-06-10T05:38:33.000Z">2024-06-10</time></p><p class="title"><a href="/2024/06/10/%E7%AB%AF%E5%8D%88%EF%BC%8C%E5%B9%B4%E4%B8%AD%E6%80%BB%E7%BB%93/">端午，年中总结</a></p><p class="categories"><a href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-06-06T12:34:28.000Z">2024-06-06</time></p><p class="title"><a href="/2024/06/06/Https%E8%A7%A3%E6%9E%90/">Https 浅解</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-05-30T04:26:18.000Z">2024-05-30</time></p><p class="title"><a href="/2024/05/30/%E5%8C%BA%E5%9D%97%E9%93%BE%E8%AE%B2%E8%A7%A3/">扒一扒比特币</a></p><p class="categories"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%91%E6%99%AE/">技术科普</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/Git/"><span class="level-start"><span class="level-item">Git</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Hadoop/"><span class="level-start"><span class="level-item">Hadoop</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Java/"><span class="level-start"><span class="level-item">Java</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Python/"><span class="level-start"><span class="level-item">Python</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/auto-js/"><span class="level-start"><span class="level-item">auto.js</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"><span class="level-start"><span class="level-item">技术分享</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%91%E6%99%AE/"><span class="level-start"><span class="level-item">技术科普</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"><span class="level-start"><span class="level-item">数据库</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E7%AC%94%E8%AE%B0/"><span class="level-start"><span class="level-item">笔记</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E7%AE%97%E6%B3%95/"><span class="level-start"><span class="level-item">算法</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><a class="level is-mobile is-marginless" href="/categories/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2025/07/"><span class="level-start"><span class="level-item">七月 2025</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2025/06/"><span class="level-start"><span class="level-item">六月 2025</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2024/06/"><span class="level-start"><span class="level-item">六月 2024</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2024/05/"><span class="level-start"><span class="level-item">五月 2024</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2023/08/"><span class="level-start"><span class="level-item">八月 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/English/"><span class="tag">English</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Git/"><span class="tag">Git</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CORS/"><span class="tag">CORS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Centos7/"><span class="tag">Centos7</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Google%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F/"><span class="tag">Google开发者模式</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTTP/"><span class="tag">HTTP</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hadoop/"><span class="tag">Hadoop</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hbase/"><span class="tag">Hbase</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hive/"><span class="tag">Hive</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Java/"><span class="tag">Java</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux%E5%91%BD%E4%BB%A4%E6%9D%82%E8%AE%B0/"><span class="tag">Linux命令杂记</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Nginx/"><span class="tag">Nginx</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python%E7%88%AC%E8%99%AB/"><span class="tag">Python爬虫</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/R/"><span class="tag">R</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SQL/"><span class="tag">SQL</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/VMware16/"><span class="tag">VMware16</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Web%E5%BC%80%E5%8F%91/"><span class="tag">Web开发</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Zookeeper/"><span class="tag">Zookeeper</span><span class="tag is-grey-lightest">1</span></a></div></div><div class="field is-grouped is-grouped-multiline"><a class="tags has-addons" href="/tags/"><span class="tag">查看全部&gt;&gt;</span></a></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=undefined&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div><p class="help">输入邮箱开始订阅，更博后邮件通知！</p></form></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/favicon.png" alt="Shimmer" height="28"></a><p class="size-small"><span>&copy; 2025 Shimmer</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© <a href="http://www.beian.miit.gov.cn/" target="_blank">豫ICP备20008890号</a><br></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><!--!--><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2025-07-30T04:26:18.000Z">2025-07-30</time></p><p class="title"><a href="/2025/07/30/%E4%BB%A3%E7%90%86%E8%BD%AF%E4%BB%B6/">代理软件</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2025-07-15T04:02:32.000Z">2025-07-15</time></p><p class="title"><a href="/2025/07/15/MIT6.5840%E5%88%86%E5%B8%83%E5%BC%8FKV%E6%9C%8D%E5%8A%A1/">MIT6.5840学习总结</a></p><p class="categories"><a href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2025-06-16T05:22:01.000Z">2025-06-16</time></p><p class="title"><a href="/2025/06/16/Cursor%E4%BD%BF%E7%94%A8%20%E4%BD%93%E9%AA%8C/">聊一聊Cursor，AI IDE 如何提升开发效率与体验</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-06-10T05:38:33.000Z">2024-06-10</time></p><p class="title"><a href="/2024/06/10/%E7%AB%AF%E5%8D%88%EF%BC%8C%E5%B9%B4%E4%B8%AD%E6%80%BB%E7%BB%93/">端午，年中总结</a></p><p class="categories"><a href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-06-06T12:34:28.000Z">2024-06-06</time></p><p class="title"><a href="/2024/06/06/Https%E8%A7%A3%E6%9E%90/">为什么我们需要HTTPS</a></p><p class="categories"><a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">网络安全</a> / <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/Web%E5%BC%80%E5%8F%91/">Web开发</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/Git/"><span class="level-start"><span class="level-item">Git</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Hadoop/"><span class="level-start"><span class="level-item">Hadoop</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Java/"><span class="level-start"><span class="level-item">Java</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Python/"><span class="level-start"><span class="level-item">Python</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/auto-js/"><span class="level-start"><span class="level-item">auto.js</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"><span class="level-start"><span class="level-item">技术分享</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%91%E6%99%AE/"><span class="level-start"><span class="level-item">技术科普</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"><span class="level-start"><span class="level-item">数据库</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E7%AC%94%E8%AE%B0/"><span class="level-start"><span class="level-item">笔记</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E7%AE%97%E6%B3%95/"><span class="level-start"><span class="level-item">算法</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><a class="level is-mobile is-marginless" href="/categories/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2025/07/"><span class="level-start"><span class="level-item">七月 2025</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2025/06/"><span class="level-start"><span class="level-item">六月 2025</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2024/06/"><span class="level-start"><span class="level-item">六月 2024</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2024/05/"><span class="level-start"><span class="level-item">五月 2024</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2023/08/"><span class="level-start"><span class="level-item">八月 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/English/"><span class="tag">English</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Git/"><span class="tag">Git</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CORS/"><span class="tag">CORS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Centos7/"><span class="tag">Centos7</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Google%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F/"><span class="tag">Google开发者模式</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTTP/"><span class="tag">HTTP</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTTPS/"><span class="tag">HTTPS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hadoop/"><span class="tag">Hadoop</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hbase/"><span class="tag">Hbase</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hive/"><span class="tag">Hive</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Java/"><span class="tag">Java</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux%E5%91%BD%E4%BB%A4%E6%9D%82%E8%AE%B0/"><span class="tag">Linux命令杂记</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Nginx/"><span class="tag">Nginx</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python%E7%88%AC%E8%99%AB/"><span class="tag">Python爬虫</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/R/"><span class="tag">R</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SQL/"><span class="tag">SQL</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SSL-TLS/"><span class="tag">SSL/TLS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/VMware16/"><span class="tag">VMware16</span><span class="tag is-grey-lightest">1</span></a></div></div><div class="field is-grouped is-grouped-multiline"><a class="tags has-addons" href="/tags/"><span class="tag">查看全部&gt;&gt;</span></a></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=undefined&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div><p class="help">输入邮箱开始订阅，更博后邮件通知！</p></form></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/favicon.png" alt="Shimmer" height="28"></a><p class="size-small"><span>&copy; 2025 Shimmer</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© <a href="http://www.beian.miit.gov.cn/" target="_blank">豫ICP备20008890号</a><br></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
             var n = new Date(time);
             now.setTime(now.getTime() + 250),
                 days = (now - n) / 1e3 / 60 / 60 / 24,
